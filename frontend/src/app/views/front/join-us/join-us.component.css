@@ -1,0 +1,120 @@
+section {
+  padding: 60px;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f3f5fa;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+.services {
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .services .section-heading h2 {
+    padding-right: 30px;
+  }
+  
+  .services::before {
+    content: url(src/assets/front/services-left.jpg);
+    top: 0px;
+    left: 0px;
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+  }
+  
+  .services::after {
+   /* content: url(..src\accets\contact-left.jpg);*/
+    bottom: -150px;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    width: 103px;
+    height: 464px;
+    z-index: -1;
+  }
+  
+  .services .service-item {
+    border: 1px solid #f3d7ff;
+    border-radius: 23px;
+    width: 650px;
+    height: 400px; /* Add this line to make the element a square */
+    padding: 20px; /* Reduce padding to fit content */
+    background-color: #fff;
+    margin-bottom: 100px;
+    transition: all .4s;
+}
+
+  
+  .services .service-item h2 {
+    font-size:32px;
+    color: #2a2a2a;
+    margin-top: 20px;
+    line-height: 30px;
+    transition: all .4s;
+   text-align: center;
+  }
+  .services .service-item h4 {
+    font-size:18px;
+    color: #2a2a2a;
+    margin-top: 20px;
+    line-height: 30px;
+    transition: all .4s;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  .services .service-item:hover {
+    border-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .services .service-item:hover h4 {
+    color: #5b03e4;
+  }
+  

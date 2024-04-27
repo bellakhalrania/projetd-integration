@@ -1,0 +1,229 @@
+
+  .navbar2 {
+    position: fixed; /* Add this line */
+  top: 0; /* Stick it to the top */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Adjust z-index if needed */
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  }
+  .navbar2 img{
+    max-height: 6rem;
+    float: left;
+  }
+  
+  .navbar2 ul {
+    margin: 23px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar2 li {
+    position: relative;
+  }
+  
+  .navbar2 a, .navbar2 a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0b0303;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar2 a i, .navbar2 a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  
+  
+  .navbar2 .getstarted {
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 50px;
+    color: #8bd8ed;
+    font-size: 14px;
+    border: 2px solid #47b2e4;
+    font-weight: 600;
+  }
+  
+  .navbar2 .getstarted:hover {
+    color: #fff;
+    background: #31a9e1;
+  }
+  
+  .navbar2 .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fffffe;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+    border-radius: 4px;
+  }
+  
+  .navbar2 .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar2 .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: 500;
+    color: #0c3c53;
+  }
+  
+  .navbar2 .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar2 .dropdown ul a:hover, .navbar2 .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+    color: #47b2e4;
+  }
+  
+  .navbar2 .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .navbar2 .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  
+  .navbar2 .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  
+  @media (max-width: 1366px) {
+    .navbar2 .dropdown .dropdown ul {
+      left: -90%;
+    }
+    .navbar2 .dropdown .dropdown:hover > ul {
+      left: -100%;
+    }
+  }
+  
+ 
+  .mobile-nav-toggle {
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
+  
+  .mobile-nav-toggle.bi-x {
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+    .navbar2 ul {
+      display: none;
+    }
+  }
+  
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(40, 58, 90, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+  }
+  
+  .navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+  
+  .navbar-mobile a {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #37517e;
+  }
+  
+  .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+    color: #47b2e4;
+  }
+  
+  .navbar-mobile .getstarted {
+    margin: 15px;
+    color: #37517e;
+  }
+  
+  .navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    border-radius:4px;
+  }
+  
+  .navbar-mobile .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+  }
+  
+  .navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+    color: #47b2e4;
+  }
+  
+  .navbar-mobile .dropdown > .dropdown-active {
+    display: block;
+  }
+  

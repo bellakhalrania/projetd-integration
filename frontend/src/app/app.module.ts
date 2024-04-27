@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,16 +14,22 @@ import { AjouterGareModule } from './views/admin/ajouter-gare/ajouter-gare.modul
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
+   
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,BrowserAnimationsModule,ReactiveFormsModule,
+
     AppRoutingModule,LayoutsModule,ListGareModule,
     DashboardModule,AjouterGareModule,FormsModule,HttpClientModule
   ],
-  providers: [],
+  providers: [
+   
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
