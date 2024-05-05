@@ -1,0 +1,42 @@
+  <!-- Outer Row -->
+  <div class="row justify-content-center" style="background-color: #d9e0ed;">
+
+   
+    <!-- Nested Row within Card Body -->
+    <div class="row row-cols-2 container-2 " style="top: 30px;">
+        <div class="col "><img src="assets/register.jpeg" style="width:100%;"></div>
+        <div class="col" style="margin-top: 40px;">
+            
+                <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Connexion !</h1>
+                </div>
+                
+                <form class="form"  #f="ngForm" (ngSubmit)="loginUser(f)">
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" 
+                            id="exampleInputEmail" 
+                            placeholder="Entrez votre adresse email..." name="usernameOrEmail" #usernameOrEmail="ngModel" ngModel>
+                    </div>
+                    <div class="input-box">
+                        <label>mot de passe</label>
+                        <input type="password" 
+                            id="exampleInputPassword" placeholder="Mot de passe" name="password" #password="ngModel" ngModel>
+                    </div>
+                    
+                    <button type="submit" >
+                        Entrer
+                    </button>
+                </form>
+                <div class="alert alert-danger" *ngIf="messageErr">
+                    {{messageErr}}
+                </div>
+                <div class="text-center mt-3">
+                    <p>Vous n'avez pas de compte ? <a routerLink="/register" >Inscrivez-vous ici</a>.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+

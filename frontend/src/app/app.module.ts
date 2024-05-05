@@ -13,19 +13,22 @@ import { DashboardModule } from './views/admin/dashboard/dashboard.module';
 import { AjouterGareModule } from './views/admin/ajouter-gare/ajouter-gare.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './views/login/login.component';
+import { SignupComponent } from './views/signup/signup.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,LoginComponent,SignupComponent,
    
    
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,ReactiveFormsModule,
-
+    BrowserModule,BrowserAnimationsModule,
+    FormsModule,CommonModule,
     AppRoutingModule,LayoutsModule,ListGareModule,
-    DashboardModule,AjouterGareModule,FormsModule,HttpClientModule
+    DashboardModule,AjouterGareModule,HttpClientModule
   ],
   providers: [
    

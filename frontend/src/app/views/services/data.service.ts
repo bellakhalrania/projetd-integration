@@ -5,9 +5,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
+  loggedIn:boolean=false
+  loggedInEmp:boolean=false
 
   constructor(private http:HttpClient) { }
-
+  //login
+  loginUser(data:any){
+    return this.http.post('http://localhost:8085/api/auth/signin',data)
+  }
+  //register 
+   registeruser(ProfilUser:any){
+  return this.http.post('http://localhost:8085/api/auth/signup',ProfilUser)
+  }
   getAllGare(){
     return this.http.get('http://localhost:8081/api/AllGare')
   }
