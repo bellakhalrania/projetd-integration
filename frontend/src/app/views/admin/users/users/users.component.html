@@ -1,0 +1,103 @@
+<h1 class="title">Listes des utilisateurs</h1>
+<ul class="breadcrumbs">
+    <li><a href="#">Listes des utilisateurs</a></li>
+    <li class="divider">/</li>
+    <li><a href="#" class="active">Utilisateurs</a></li>
+</ul>
+<div  style="width: 1200px;">
+<div class="card" style="padding: 40px;">
+    <div class="content-data">
+
+<div class="head">
+    <h3></h3>
+    <div class="menu">
+        <nav>
+        <form action="#">
+            <div class="form-group">
+                <input type="text" placeholder="Search..." name="username" [(ngModel)]="searchname">
+                <button (click)="onSearchName()"><label class="input-group-text" for="inputGroupSelect02" ><i class="bi bi-search"></i></label></button>
+            </div>
+        </form>
+    </nav>
+        
+    </div>
+</div>
+
+           
+    
+<div class="alert alert-danger" *ngIf="messageEr && !messageSu">
+    {{messageEr}}
+  </div>
+  <div class="alert alert-success" *ngIf="messageSu && !messageErr">
+    {{messageSu}}
+  </div> 
+
+
+<table class="table">
+    <thead>
+        <tr>
+          
+          <th></th>
+          <th>Nom</th>
+          <th>Nom utilisateur</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let item of dataArray;index as i">
+          
+          <td class="icon">
+            <i class="bi bi-person-circle"></i>
+          </td>
+          <td>{{item.name}}</td>
+          <td>
+            {{item.username}}
+          </td>
+          <td>{{item.email}}</td>
+          <td><span *ngFor="let role of item.roles">
+            {{ role.name }}
+          </span></td>
+         
+         <td> 
+            <button (click)="getUser(item.id)" type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class="bi bi-pencil-square"></i></button></td>
+        </tr>
+        
+      </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5  *ngIf="dataArray" class="modal-title" id="staticBackdropLabel">Informations de {{User?.username}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <ul *ngIf="User" style="list-style-type: none; padding: 0;margin-left: 30px;">
+               
+                <ul>
+                    <li style=" margin: 12px; font-size: 20px; color: black;"><strong>Nom :</strong> {{User?.username}}</li>
+                    <li style=" margin: 12px; font-size: 20px; color: black;"><strong>Email :</strong> {{User?.email}}</li>
+                   
+
+                </ul>
+            </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+

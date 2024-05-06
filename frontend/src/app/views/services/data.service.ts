@@ -17,6 +17,17 @@ export class DataService {
    registeruser(ProfilUser:any){
   return this.http.post('http://localhost:8085/api/auth/signup',ProfilUser)
   }
+
+  getAllUsers(){
+    return this.http.get('http://localhost:8085/api/auth/getAllUser')
+  }
+  getuserById(id:any){
+    return this.http.get('http://localhost:8085/api/auth/getUser/'+id)
+  }
+  
+  getuserByUsername(username:any){
+    return this.http.get('http://localhost:8085/api/auth/getUsername/'+username)
+  }
   getAllGare(){
     return this.http.get('http://localhost:8081/api/AllGare')
   }

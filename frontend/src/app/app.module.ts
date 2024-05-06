@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './views/login/login.component';
 import { SignupComponent } from './views/signup/signup.component';
+import { UsersModule } from './views/admin/users/users.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SignupComponent } from './views/signup/signup.component';
     BrowserModule,BrowserAnimationsModule,
     FormsModule,CommonModule,
     AppRoutingModule,LayoutsModule,ListGareModule,
-    DashboardModule,AjouterGareModule,HttpClientModule
+    DashboardModule,AjouterGareModule,HttpClientModule,
+    UsersModule
   ],
   providers: [
    
