@@ -13,6 +13,7 @@ import { FooterComponent } from '../views/front/footer/footer.component';
 
 
 
+
 @NgModule({
   declarations: [
     AdminLayoutComponent,
@@ -24,6 +25,7 @@ import { FooterComponent } from '../views/front/footer/footer.component';
     JoinUsComponent,
     ContactComponent,
     FooterComponent,
+   
 
     
   ],

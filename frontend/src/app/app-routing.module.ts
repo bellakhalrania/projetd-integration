@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { FrontLayoutComponent } from './layouts/front-layout/front-layout.component';
 import { LoginComponent } from './views/login/login.component';
+import { SignupComponent } from './views/signup/signup.component';
+
 
 const routes: Routes = [
   {path:'',component:FrontLayoutComponent},
@@ -13,9 +15,11 @@ const routes: Routes = [
     {path:'ajouter-gare',loadChildren:()=>import('./views/admin/ajouter-gare/ajouter-gare.module').then(m=>m.AjouterGareModule)},
     {path:'offre',loadChildren:()=>import('./views/admin/offre-admin/offre-admin.module').then(m=>m.OffreAdminModule)},
     {path:'users',loadChildren:()=>import('./views/admin/users/users.module').then(m=>m.UsersModule)},
+    {path:'Profile',loadChildren:()=>import('./views/admin/profile-admin/profile-admin.module').then(m=>m.ProfileAdminModule)},
   ]},
   {path:'login',component:LoginComponent},
-
+  {path:'signup',component:SignupComponent},
+ 
   
 ];
 

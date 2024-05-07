@@ -106,6 +106,16 @@ export class AdminLayoutComponent implements OnInit {
       });
     }
 
-    
+    const profile = document.querySelector('nav .profile');
+  if (profile) {
+    const imgProfile = profile.querySelector('img');
+    const dropdownProfile = profile.querySelector('.profile-link');
+
+    if (imgProfile && dropdownProfile) {
+      imgProfile.addEventListener('click', function () {
+        dropdownProfile.classList.toggle('show');
+      });
+    }
+  }
   }
 }

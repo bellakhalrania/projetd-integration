@@ -1,42 +1,51 @@
-  <!-- Outer Row -->
-  <div class="row justify-content-center" style="background-color: #d9e0ed;">
-
-   
-    <!-- Nested Row within Card Body -->
-    <div class="row row-cols-2 container-2 " style="top: 30px;">
-        <div class="col "><img src="assets/register.jpeg" style="width:100%;"></div>
-        <div class="col" style="margin-top: 40px;">
-            
-                <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Connexion !</h1>
-                </div>
-                
-                <form class="form"  #f="ngForm" (ngSubmit)="register(f)">
-                    <div class="input-box">
-                        <label>Email</label>
-                        <input type="email" 
-                            id="exampleInputEmail" 
-                            placeholder="Entrez votre adresse email..." name="email" #email="ngModel" ngModel>
+       <div class="wrapper" style="background-color: rgb(201 221 255);">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="assets/registerform/images/register.jpeg" alt="">
+				</div>
+				<form #f="ngForm" (ngSubmit)="register(f)">
+					<h3>Registration Form</h3>
+					<div class="form-group">
+						<input type="text" placeholder="First Name" class="form-control"name="name" #name="ngModel" ngModel>
+						<input type="text" placeholder="Last Name" class="form-control">
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Username" class="form-control"name="username" #username="ngModel" ngModel>
+						<i class="zmdi zmdi-account"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Email Address" class="form-control"name="email" #email="ngModel" ngModel>
+						<i class="zmdi zmdi-email"></i>
+					</div>
+					<div class="form-wrapper">
+						<select name="" id="" class="form-control">
+							<option value="" disabled selected>Gender</option>
+							<option value="male">Male</option>
+							<option value="femal">Female</option>
+							<option value="other">Other</option>
+						</select>
+						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" placeholder="Password" class="form-control"name="password" #password="ngModel" ngModel>
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" placeholder="Confirm Password" class="form-control">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					<button type="submit">Register
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+                    <div class="alert alert-danger" *ngIf="messageErr">
+                        {{messageErr}}
                     </div>
-                    <div class="input-box">
-                        <label>mot de passe</label>
-                        <input type="password" 
-                            id="exampleInputPassword" placeholder="Mot de passe" name="password" #password="ngModel" ngModel>
+                    <div class="text-center mt-3">
+                        <p>Vous avez déja un compte ? <a routerLink="/login" >Connexion..</a>.</p>
+                        <p> <a routerLink="/" >annuler?</a></p>
                     </div>
-                    
-                    <button type="submit" >
-                        Entrer
-                    </button>
-                </form>
-                <div class="alert alert-danger" *ngIf="messageErr">
-                    {{messageErr}}
-                </div>
-                <div class="text-center mt-3">
-                    <p>Vous n'avez pas de compte ? <a routerLink="/register" >Inscrivez-vous ici</a>.</p>
-                </div>
+				</form>
                 
-            </div>
-        </div>
-    </div>
-
-
+			</div>
+		
+		

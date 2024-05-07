@@ -15,15 +15,14 @@ export class SignupComponent implements OnInit {
 
 
   constructor(private ds:DataService,
-    /*private message:NzMessageService,*/
   private route:Router) {
   }
 
   register(f:any){
     let data=f.value
-    //console.log(data)
+    console.log(data)
     this.ds.registeruser(data).subscribe(response=>{
-      //console.log(response)
+      console.log(response)
       this.route.navigate(['login'])
       
     },(err:HttpErrorResponse)=>{
