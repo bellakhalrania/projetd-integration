@@ -16,7 +16,7 @@ const routes: Routes = [
     {path:'ajouter-gare',loadChildren:()=>import('./views/admin/ajouter-gare/ajouter-gare.module').then(m=>m.AjouterGareModule)},
     {path:'offre',loadChildren:()=>import('./views/admin/offre-admin/offre-admin.module').then(m=>m.OffreAdminModule)},
     {path:'users',loadChildren:()=>import('./views/admin/users/users.module').then(m=>m.UsersModule)},
-    {path:'Profile',loadChildren:()=>import('./views/admin/profile-admin/profile-admin.module').then(m=>m.ProfileAdminModule)},
+    {path:'profile',loadChildren:()=>import('./views/admin/profile-admin/profile-admin.module').then(m=>m.ProfileAdminModule)},
   ]},
   {path:'passager',component:PassagerLayoutComponent,children:[
     {path:'start',loadChildren:()=>import('./views/passager/start-passager/start-passager.module').then(m=>m.StartPassagerModule)},
