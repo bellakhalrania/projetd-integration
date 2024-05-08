@@ -11,7 +11,7 @@ public class SignUpDto {
     
 	public SignUpDto() {
 		super();
-		
+		// TODO Auto-generated constructor stub
 	}
 	public SignUpDto(String name, String username, String email, String password) {
 		super();
