@@ -17,7 +17,6 @@ export class AjouterGareComponent implements OnInit {
   add(f:any){
     let data=f.value;
     console.log(data);
-   // this.ds.PostGare(data).subscribe(data=>console.log(data));
      this.ds.addGare(data).subscribe(data=>console.log(data));
      this.route.navigate(['admin/list-gare'])
   }

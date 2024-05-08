@@ -4,6 +4,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { FrontLayoutComponent } from './layouts/front-layout/front-layout.component';
 import { LoginComponent } from './views/login/login.component';
 import { SignupComponent } from './views/signup/signup.component';
+import { PassagerLayoutComponent } from './layouts/passager-layout/passager-layout.component';
 
 
 const routes: Routes = [
@@ -17,9 +18,10 @@ const routes: Routes = [
     {path:'users',loadChildren:()=>import('./views/admin/users/users.module').then(m=>m.UsersModule)},
     {path:'Profile',loadChildren:()=>import('./views/admin/profile-admin/profile-admin.module').then(m=>m.ProfileAdminModule)},
   ]},
+  {path:'passager',component:PassagerLayoutComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
- 
+  
   
 ];
 

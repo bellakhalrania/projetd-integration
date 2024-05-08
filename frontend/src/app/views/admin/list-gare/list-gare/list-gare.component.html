@@ -47,8 +47,8 @@
           </td>
           <td>{{item.address}}</td>
          
-         <td> <button type="button" style="border: none;" data-toggle="modal" data-target="#exampleModal" (click)="getdata(item.nom_Gare,item.lieu,item.address,item.id)"><img src="assets/admin/images/edite.png" class="icon-img"> </button> 
-            <button type="button" style="border: none;" (click)="deletegare(item.id,i)"><img src="assets/admin/images/delete.png" class="icon-img" ></button></td>
+         <td> <a data-toggle="modal" data-target="#exampleModal" (click)="getdata(item.nom_Gare,item.lieu,item.address,item.id)"><img src="assets/admin/images/edite.png" class="icon-img"> </a> 
+            <a  (click)="deletegare(item.id,i)"><img src="assets/admin/images/delete.png" class="icon-img" ></a></td>
         </tr>
         
       </tbody>

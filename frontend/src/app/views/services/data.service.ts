@@ -53,15 +53,15 @@ export class DataService {
     return this.http.get('http://localhost:8085/api/auth/getUsername/'+username)
   }
   getAllGare(){
-    return this.http.get('http://localhost:8081/api/AllGare')
+    return this.http.get('http://localhost:8085/api/AllGare')
   }
   addGare(gare:any){
-    return this.http.post('http://localhost:8081/api/gare',gare);
+    return this.http.post('http://localhost:8085/api/gare',gare);
   }
   deletegare(id:any){
-    return this.http.delete('http://localhost:8081/api/gare/'+id)
+    return this.http.delete('http://localhost:8085/api/gare/'+id)
   }
   updategare(id:string,newdata:any){
-    return this.http.put('http://localhost:8081/api/gare/'+id,newdata)
+    return this.http.put('http://localhost:8085/api/gare/'+id,newdata)
   }
 }

@@ -10,6 +10,7 @@ import { AboutUsComponent } from '../views/front/about-us/about-us.component';
 import { JoinUsComponent } from '../views/front/join-us/join-us.component';
 import { ContactComponent } from '../views/front/contact/contact.component';
 import { FooterComponent } from '../views/front/footer/footer.component';
+import { PassagerLayoutComponent } from './passager-layout/passager-layout.component';
 
 
 
@@ -25,6 +26,7 @@ import { FooterComponent } from '../views/front/footer/footer.component';
     JoinUsComponent,
     ContactComponent,
     FooterComponent,
+    PassagerLayoutComponent,
    
 
     
