@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   }
   messageErr=""
    dataReceived: any; 
+   role:any;
 
    loginUser(f:any) {
     if (f.valid) {
@@ -24,11 +25,23 @@ export class LoginComponent implements OnInit {
       this.ds.loginUser(data).subscribe((response) => {
         this.dataReceived = response;
         this.ds.SaveDataUser(this.dataReceived);
-        console.log(this.dataReceived);
-        this.route.navigate(['/']);
+        this.role=this.dataReceived.role;
+
+        console.log(this.role);
+        if(this.role=="ROLE_USER"){
+          this.route.navigate(['/passager/start']);
+        }
+        if(this.role=="ROLE_CHAUFFEUR"){
+          this.route.navigate(['/chauffeur']);
+        }
+        if(this.role=="ROLE_ADMIN"){
+          this.route.navigate(['/admin/dashboard']);
+        }
+
+        
         console.log(this.ds.loggedIn);
        
-        console.log(this.ds.ProfilUser)
+        //console.log(this.ds.ProfilUser)
        
       }, (err: HttpErrorResponse) => {
         

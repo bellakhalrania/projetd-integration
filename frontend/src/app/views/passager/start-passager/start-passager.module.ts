@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { StartPassagerRoutingModule } from './start-passager-routing.module';
 import { StartPassagerComponent } from './start-passager/start-passager.component';
+import { RouterLink } from '@angular/router';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { StartPassagerComponent } from './start-passager/start-passager.componen
   ],
   imports: [
     CommonModule,
-    StartPassagerRoutingModule
+    StartPassagerRoutingModule,
+    RouterLink
   ]
 })
 export class StartPassagerModule { }

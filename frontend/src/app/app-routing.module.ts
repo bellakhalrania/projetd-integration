@@ -21,6 +21,8 @@ const routes: Routes = [
   {path:'passager',component:PassagerLayoutComponent,children:[
     {path:'start',loadChildren:()=>import('./views/passager/start-passager/start-passager.module').then(m=>m.StartPassagerModule)},
     {path:'contact',loadChildren:()=>import('./views/passager/contact-from/contact-from.module').then(m=>m.ContactFromModule)},
+    {path:'liste-gare',loadChildren:()=>import('./views/passager/listes-gare/listes-gare.module').then(m=>m.ListesGareModule)},
+    {path:'liste-chauffre',loadChildren:()=>import('./views/passager/chauffre-profile/chauffre-profile.module').then(m=>m.ChauffreProfileModule)},
   ]},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},

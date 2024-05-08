@@ -19,6 +19,8 @@ import { SignupComponent } from './views/signup/signup.component';
 import { UsersModule } from './views/admin/users/users.module';
 import { StartPassagerModule } from './views/passager/start-passager/start-passager.module';
 import { ContactFromModule } from './views/passager/contact-from/contact-from.module';
+import { ListesGareModule } from './views/passager/listes-gare/listes-gare.module';
+import { ChauffreProfileModule } from './views/passager/chauffre-profile/chauffre-profile.module';
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { ContactFromModule } from './views/passager/contact-from/contact-from.mo
     FormsModule,CommonModule,
     AppRoutingModule,LayoutsModule,ListGareModule,
     DashboardModule,AjouterGareModule,HttpClientModule,
-    UsersModule,StartPassagerModule,ContactFromModule
+    UsersModule,StartPassagerModule,ContactFromModule,
+    ListesGareModule,ChauffreProfileModule
   ],
   providers: [
    
