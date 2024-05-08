@@ -49,97 +49,12 @@ https://templatemo.com/tm-590-topic-listing
   background-color: var(--white-color);
   font-family: var(--body-font-family); 
 }
-
-
-/*---------------------------------------
-  TYPOGRAPHY               
------------------------------------------*/
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--dark-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--title-font-family); 
-  font-weight: var(--font-weight-semibold);
-}
-
-h1 {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-weight-bold);
-}
-
-h2 {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-weight-bold);
-}
-
-h3 {
-  font-size: var(--h3-font-size);
-}
-
-h4 {
-  font-size: var(--h4-font-size);
-}
-
-h5 {
-  font-size: var(--h5-font-size);
-}
-
-h6 {
-  color: var(--primary-color);
-  font-size: var(--h6-font-size);
-}
-
-p {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-normal);
-}
-
-ul li {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-normal);
-}
-
-a, 
-button {
-  touch-action: manipulation;
-  transition: all 0.3s;
-}
-
-a {
-  display: inline-block;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-}
-
-b,
-strong {
-  font-weight: var(--font-weight-bold);
-}
-
-
 /*---------------------------------------
   SECTION               
 -----------------------------------------*/
 .section-padding {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 60px;
 }
 
 .section-bg {
@@ -242,38 +157,6 @@ strong {
   border-color: var(--white-color);
   color: var(--white-color);
 }
-
-
-/*---------------------------------------
-  SITE HEADER              
------------------------------------------*/
-.site-header {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  padding-top: 150px;
-  padding-bottom: 80px;
-}
-
-.site-header .container2
- {
-  height: 100%;
-}
-
-.breadcrumb-item+.breadcrumb-item::before,
-.breadcrumb-item a:hover,
-.breadcrumb-item.active {
-  color: var(--white-color);
-}
-
-.site-header .custom-icon {
-  color: var(--white-color);
-  font-size: var(--h4-font-size);
-}
-
-.site-header .custom-icon:hover {
-  color: var(--secondary-color);
-}
-
-
 
 /*---------------------------------------
   HERO        

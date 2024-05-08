@@ -17,6 +17,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './views/login/login.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { UsersModule } from './views/admin/users/users.module';
+import { StartPassagerModule } from './views/passager/start-passager/start-passager.module';
+import { ContactFromModule } from './views/passager/contact-from/contact-from.module';
 
 
 @NgModule({
@@ -30,7 +32,7 @@ import { UsersModule } from './views/admin/users/users.module';
     FormsModule,CommonModule,
     AppRoutingModule,LayoutsModule,ListGareModule,
     DashboardModule,AjouterGareModule,HttpClientModule,
-    UsersModule
+    UsersModule,StartPassagerModule,ContactFromModule
   ],
   providers: [
    

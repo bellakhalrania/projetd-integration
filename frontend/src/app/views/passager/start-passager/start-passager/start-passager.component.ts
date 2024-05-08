@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/views/services/data.service';
 
 @Component({
-  selector: 'app-passager-layout',
-  templateUrl: './passager-layout.component.html',
-  styleUrls: ['./passager-layout.component.css']
+  selector: 'app-start-passager',
+  templateUrl: './start-passager.component.html',
+  styleUrls: ['./start-passager.component.css']
 })
-export class PassagerLayoutComponent implements OnInit {
+export class StartPassagerComponent implements OnInit {
+
   username:any;
 
   constructor(private ds: DataService) {
@@ -17,10 +18,7 @@ export class PassagerLayoutComponent implements OnInit {
       // Handle the case where localStorage is not available
       this.username = 'Username'; // Replace with an appropriate fallback value
     }
-   }
-
-  
-
+  }
   ngOnInit(): void {
   }
 

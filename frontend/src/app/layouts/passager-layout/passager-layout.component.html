@@ -7,7 +7,10 @@
                 <div class="containernav">
                     <a class="navbar-brand" href="index.html">
                         
-                        <img src="../assets/passager/images/logo.png" style="    width: 133px;
+                        <img src="../assets/passager/images/logo.png" style="    width: 158px;
+                        
+                        padding-left: 20px;
+                        padding-top: 10px;
                         height: 72px;">
                     </a>
 
@@ -22,7 +25,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-lg-5 me-lg-auto" style="    padding-right: 224px;">
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                                <a class="nav-link click-scroll" routerLink="/passager/start">Home</a>
                             </li>
 
                             <li class="nav-item">
@@ -38,7 +41,7 @@
                             </li>
     
                             <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                                <a class="nav-link click-scroll" routerLink="/passager/contact" >Contact</a>
                             </li>
 
                             <li class="nav-item dropdown">
@@ -47,7 +50,7 @@
                                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                                     <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
 
-                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                                    <li><a class="dropdown-item" >Contact Form</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -55,12 +58,12 @@
                         
                         <ul class="navbar-nav ms-lg-5 ">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">foulen el fouleniii</a>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{username}}</a>
     
                                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+                                    <li><a class="dropdown-item" href="topics-listing.html">profile</a></li>
     
-                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                                   
                                 </ul>
                             </li>
                         </ul>
@@ -75,84 +78,84 @@
             </nav>
             
 
-            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-12 mx-auto">
-                            <h1 class="text-white text-center">Bienvenue  foulen el foulenii!!!!</h1>
-
-    
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="featured-section">
-                <div class="container">
-                    <div class="row justify-content-center">
-
-                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <a href="topics-detail.html">
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">consulter liste des chauffeur</h5>
-
-                                           
-                                        </div>
-
-                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
-                                    </div>
-
-                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <a href="topics-detail.html">
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">consulter liste des gares</h5>
-
-                                            
-                                        </div>
-
-                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
-                                    </div>
-
-                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <a href="topics-detail.html">
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">faire un abonnement</h5>
-
-                                            
-                                        </div>
-
-                                        <span class="badge bg-design rounded-pill ms-auto">14</span>
-                                    </div>
-
-                                    <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+           <router-outlet></router-outlet>
 
  
  </div>
+
+ <footer class="site-footer section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-12 mb-4 pb-2">
+                <a class="navbar-brand mb-2" href="index.html">
+                    <i class="bi-back"></i>
+                    <img src="../assets/front/logo.png" style="    width: 133px;
+                    height: 72px;">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <h6 class="site-footer-title mb-3">Resources</h6>
+
+                <ul class="site-footer-links">
+                    <li class="site-footer-link-item">
+                        <a href="#" class="site-footer-link">Home</a>
+                    </li>
+
+                    <li class="site-footer-link-item">
+                        <a href="#" class="site-footer-link">How it works</a>
+                    </li>
+
+                    <li class="site-footer-link-item">
+                        <a href="#" class="site-footer-link">FAQs</a>
+                    </li>
+
+                    <li class="site-footer-link-item">
+                        <a href="#" class="site-footer-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                <h6 class="site-footer-title mb-3">Information</h6>
+
+                <p class="text-white d-flex mb-1">
+                    <a href="tel: 305-240-9671" class="site-footer-link">
+                        305-240-9671
+                    </a>
+                </p>
+
+                <p class="text-white d-flex">
+                    <a href="mailto:info@company.com" class="site-footer-link">
+                        info@company.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    English</button>
+
+                    <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" type="button">Thai</button></li>
+
+                        <li><button class="dropdown-item" type="button">Myanmar</button></li>
+
+                        <li><button class="dropdown-item" type="button">Arabic</button></li>
+                    </ul>
+                </div>
+
+                <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+                
+            </div>
+
+        </div>
+    </div>
+</footer>
+
 
         
 

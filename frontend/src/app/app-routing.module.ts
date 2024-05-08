@@ -18,7 +18,10 @@ const routes: Routes = [
     {path:'users',loadChildren:()=>import('./views/admin/users/users.module').then(m=>m.UsersModule)},
     {path:'Profile',loadChildren:()=>import('./views/admin/profile-admin/profile-admin.module').then(m=>m.ProfileAdminModule)},
   ]},
-  {path:'passager',component:PassagerLayoutComponent},
+  {path:'passager',component:PassagerLayoutComponent,children:[
+    {path:'start',loadChildren:()=>import('./views/passager/start-passager/start-passager.module').then(m=>m.StartPassagerModule)},
+    {path:'contact',loadChildren:()=>import('./views/passager/contact-from/contact-from.module').then(m=>m.ContactFromModule)},
+  ]},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   
