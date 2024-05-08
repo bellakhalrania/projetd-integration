@@ -8,34 +8,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
-body {
-  font-family: "Poppins-Regular";
-  color: #333;
-  font-size: 13px;
-  margin: 0; }
-
-input, textarea, select, button {
-  font-family: "Poppins-Regular";
-  color: #333;
-  font-size: 13px; }
-
-p, h1, h2, h3, h4, h5, h6, ul {
-  margin: 0; }
-
-img {
-  max-width: 100%; }
-
-ul {
-  padding-left: 0;
-  margin-bottom: 0; }
-
-a:hover {
-  text-decoration: none; }
-
-:focus {
-  outline: none; }
-
 .wrapper {
   min-height: 100vh;
   background-size: cover;

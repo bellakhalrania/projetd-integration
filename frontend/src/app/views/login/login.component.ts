@@ -21,9 +21,15 @@ export class LoginComponent implements OnInit {
     if (f.valid) {
       let data = f.value;
       console.log(data);
-      this.ds.loginUser(data).subscribe(() => {
+      this.ds.loginUser(data).subscribe((response) => {
+        this.dataReceived = response;
+        this.ds.SaveDataUser(this.dataReceived);
+        console.log(this.dataReceived);
         this.route.navigate(['/']);
         console.log(this.ds.loggedIn);
+       
+        console.log(this.ds.ProfilUser)
+       
       }, (err: HttpErrorResponse) => {
         
         this.messageErr=err.error

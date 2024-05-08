@@ -8,11 +8,35 @@ export class DataService {
   loggedIn:boolean=false
   loggedInEmp:boolean=false
 
+  ProfilUser={
+    id:'',
+    name:'',
+    role:'',
+    email:'',
+    username:''
+  }
+
   constructor(private http:HttpClient) { }
   //login
   loginUser(data:any){
     return this.http.post('http://localhost:8085/api/auth/signin',data)
   }
+  SaveDataUser(user:any){
+    localStorage.setItem('id',user.id)
+    localStorage.setItem('name',user.name)
+    localStorage.setItem('username',user.username)
+    localStorage.setItem('role',user.role)
+    localStorage.setItem('email',user.email)
+    
+    this.ProfilUser.id=user.id
+    this.ProfilUser.name=user.name
+    this.ProfilUser.username=user.username
+    this.ProfilUser.role=user.role
+    this.ProfilUser.email=user.email
+
+    this.loggedIn=true
+ }
+
   //register 
    registeruser(ProfilUser:any){
   return this.http.post('http://localhost:8085/api/auth/signup',ProfilUser)
