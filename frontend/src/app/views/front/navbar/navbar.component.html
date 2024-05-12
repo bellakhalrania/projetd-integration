@@ -1,47 +1,77 @@
 
-<div>
-          <nav class="navbar2 navbar-expand-lg bg-body-tertiary" >
-            <div class="container-fluid">
-              <img src="../assets/front/logi.png" class="logo">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                  <a class="navbar-brand" routerLink="/">Home</a>
+
+  
+  <nav class="navbar navbar-expand-lg">
+    <div class="containernav">
+        <a class="navbar-brand" href="index.html">
+            
+            <img src="../assets/passager/images/logo.png" style="    width: 158px;
+            
+            padding-left: 20px;
+            padding-top: 10px;
+            height: 72px;">
+        </a>
+
+        <div class="d-lg-none ms-auto me-4">
+            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-5 me-lg-auto" style="    padding-right: 224px;">
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" routerLink="/passager/start">Home</a>
                 </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/about-us">À PROPOS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/portfolio">Nouvelles</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" routerLink="/Destination">Destination</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact">Contact</a>
-                  </li>
-                 
-                  <li class="nav-item dropdown d-fex">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Se Connecter
-                    </a>
-                    <ul class="dropdown-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#section_2">Browse Topics</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#section_3">How it works</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" routerLink="/passager/contact" >Contact</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                        <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                        <li><a class="dropdown-item" >Contact Form</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+            
+            
+            <ul class="navbar-nav ms-lg-5 ">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                       <li><a class="dropdown-item" routerLink="/signup">Registre</a></li>
                       <li><a class="dropdown-item" routerLink="/login">Login</a></li>
+                       
                     </ul>
-                  </li>
-               
-  
-                  
-                </ul>
-               
-              </div>
+                </li>
+            </ul>
+            <div class="d-none d-lg-block">
+                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
             </div>
-          </nav>
-        
             
-  </div>
-  
+                
+        
+        </div>
+    </div>
+</nav>
