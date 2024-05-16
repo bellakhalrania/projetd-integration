@@ -6,7 +6,7 @@ import { FrontLayoutComponent } from './front-layout/front-layout.component';
 import { NavbarComponent } from '../views/front/navbar/navbar.component';
 import { HomeComponent } from '../views/front/home/home.component';
 
-import { AboutUsComponent } from '../views/front/about-us/about-us.component';
+import { ServiceComponent } from '../views/front/service/service.component';
 
 import { ContactComponent } from '../views/front/contact/contact.component';
 import { PassagerLayoutComponent } from './passager-layout/passager-layout.component';
@@ -21,7 +21,7 @@ import { FooterComponent } from '../views/front/footer/footer.component';
     FrontLayoutComponent,
     NavbarComponent,
     HomeComponent,
-    AboutUsComponent,
+    ServiceComponent,
     ContactComponent,
     PassagerLayoutComponent,
     FooterComponent

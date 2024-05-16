@@ -20,7 +20,8 @@ import { UsersModule } from './views/admin/users/users.module';
 import { StartPassagerModule } from './views/passager/start-passager/start-passager.module';
 import { ContactFromModule } from './views/passager/contact-from/contact-from.module';
 import { ListesGareModule } from './views/passager/listes-gare/listes-gare.module';
-import { ChauffreProfileModule } from './views/passager/chauffre-profile/chauffre-profile.module';
+import { ChauffreProfileModule } from './views/passager/chauffre-profile/chauffre-profile.module';/*
+import { ServicesComponent } from './views/front/services/services.component';*/
 
 
 @NgModule({
