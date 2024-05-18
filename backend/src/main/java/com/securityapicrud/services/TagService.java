@@ -6,23 +6,24 @@ import java.util.List;
 
 import com.securityapicrud.entity.Offre;
 import com.securityapicrud.entity.Tag;
+
 public interface TagService {
 	
- void addTagToOffre(long idOffre, long idTag);
+	void addTagToOffre(long idOffre, long idTag);
 	
- List<Tag> findTagsForOffret(long idOffre);
+	List<Tag> findTagsForOffre(long idOffre);
 	
- List<Tag> findAllTags();
+	List<Tag> findAllTags();
 	
- void deleteTagFromOffre(long idTag, long idOffre);
+	void deleteTagFromOffre(long idTag, long idProduct);
 	
- Tag addTag(Tag tag);
+	Tag addTag(Tag tag);
 	
- void deleteTag(long id);
+	void deleteTag(long id);
+
 	
- Tag findTagById(long id);
+	 Tag findTagById(long id);
 	 
- List<Offre> findOffresForTag(long idTag);
+	 List<Offre> findOffreForTag(long idTag);
 
 }
-

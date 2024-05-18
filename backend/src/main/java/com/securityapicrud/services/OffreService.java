@@ -7,17 +7,17 @@ import com.securityapicrud.entity.Offre;
 
 public interface OffreService {
 	
- Offre addProductToCategory(Offre offre, long idCategory);
+ Offre addOffreToCategory(Offre offre, long idCategory);
 	
- Offre editProduct(Offre offre, long id);
+ Offre editOffre(Offre offre, long id);
 	
- Offre findProductById(long id);
+ Offre findOffreById(long id);
 	
- void deleteProduct(long id);
+ void deleteOffre(long id);
 	
  List<Offre> findAllOffres();
 	
- List<Offre> findProductsForCategory(long idCategory);
+ List<Offre> findOffresForCategory(long idCategory);
 	
  Offre getOffre(long id);
 

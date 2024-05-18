@@ -24,6 +24,7 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private boolean admin;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "user_roles",
@@ -46,7 +47,7 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(long id, String name, String username, String email, String password ,List<Category> categories, List<Cart> carts) {
+	public User(long id, String name, String username, String email, String password ,boolean admin,List<Category> categories, List<Cart> carts) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -55,13 +56,14 @@ public class User {
 		this.password = password;
 		 this.categories = categories;
 		   this.carts = carts;
+		   this.admin=admin;
 		
 	}
 	
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", username=" + username + ", email=" + email + ", password="
+		return "User [id=" + id + ", name=" + name + ", admin="+admin+" username=" + username + ", email=" + email + ", password="
 				+ password + ", roles=" + roles + "]";
 	}
 
@@ -91,6 +93,16 @@ public class User {
 
 	public String getEmail() {
 		return email;
+	}
+
+	
+	
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
 	}
 
 	public void setEmail(String email) {
