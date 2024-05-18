@@ -96,7 +96,7 @@ public class Tag {
    this.offres = offres;
  }
 
- public void addProductToTag(Offre offre) {
+ public void addOffreToTag(Offre offre) {
    if(getOffres()==null) {
      this.offres = new ArrayList<>();
  }

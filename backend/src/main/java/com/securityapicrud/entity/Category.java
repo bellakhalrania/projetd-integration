@@ -70,19 +70,19 @@ public class Category {
    this.user = user;
  }
 
- public List<Offre> getProducts() {
+ public List<Offre> getOffres() {
    return offres;
  }
 
- public void setProducts(List<Offre> offres) {
+ public void setOffres(List<Offre> offres) {
    this.offres = offres;
  }
 	 
- public void addProductToCategory(Offre offre) {
-  if (getProducts()==null) {
+ public void addOffreToCategory(Offre offre) {
+  if (getOffres()==null) {
     this.offres = new ArrayList<>();
   }
-    getProducts().add(offre);
+  getOffres().add(offre);
     offre.setCategory(this);
  }	 
 }

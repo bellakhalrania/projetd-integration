@@ -52,7 +52,7 @@ public class Offre {
 
 
  @JsonProperty(access = Access.WRITE_ONLY)
- @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+ @OneToMany(cascade = CascadeType.ALL, mappedBy = "offre")
  private List<Comment> comments;
  
  
