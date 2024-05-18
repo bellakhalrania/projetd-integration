@@ -1,9 +1,9 @@
 export class User {
-    id: number;
-    username: string;
-    password: string;
-    address: string;
-    admin: boolean;
+    id: number=0;
+    username: string="";
+    password: string="";
+    address: string="";
+    admin: boolean=false;
   
 
   }
@@ -36,12 +36,12 @@ export class User {
     dateCreated: any,
     status: any
   }
-  export class ProductOrder {
-    id: number;
-    product: Product;
+  export class OffreOrder {
+    id: number=0;
+    offre: Offre;
     quantity: number = 1;
-    constructor(product: Product, quantity: number) {
-      this.product = product;
+    constructor(offre: Offre, quantity: number) {
+      this.offre = offre;
       this.quantity = quantity = 1;
     }
   }
@@ -61,16 +61,16 @@ export class User {
     products: any
   }
   export class Item {
-    name: string;
-    value: string;
-    price: number;
+    name: string="";
+    value: string="";
+    price: number=0;
   }
-  export class UpdateOffre {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    pictureUrl: string;
+  export class UpdateO {
+    id: number=0;
+    name: string="";
+    description: string="";
+    price: number=0;
+    pictureUrl: string="";
   }
   export const ITEMS: Item[] = [
     {
