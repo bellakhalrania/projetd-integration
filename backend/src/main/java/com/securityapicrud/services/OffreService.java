@@ -20,5 +20,6 @@ public interface OffreService {
  List<Offre> findOffresForCategory(long idCategory);
 	
  Offre getOffre(long id);
+ List<Offre> findByName(String name);
 
 }

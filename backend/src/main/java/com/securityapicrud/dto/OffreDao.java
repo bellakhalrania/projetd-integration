@@ -16,7 +16,7 @@ public interface OffreDao extends JpaRepository<Offre, Long>{
     List<Offre> findByName(@Param("n") String name);
     List<Tag> getTagsByOffre(Offre offre);
 	
-
+  
     
     
 }

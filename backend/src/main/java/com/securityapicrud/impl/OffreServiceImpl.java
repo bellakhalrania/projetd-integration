@@ -32,6 +32,10 @@ public class OffreServiceImpl implements OffreService {
 	}
 	
 	
+	  @Override
+	    public List<Offre> findByName(String name) {
+	        return offreDao.findByName(name);
+	    }
 
 
 	@Override
