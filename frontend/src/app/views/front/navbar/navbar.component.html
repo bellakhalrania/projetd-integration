@@ -1,5 +1,66 @@
 
 
+<style>
+    body {
+      font-family: initial;
+      font-size: 16px;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    a {
+      margin-right: 20px;
+      color: aliceblue;
+    }
+  
+    .toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: #1976d2;
+      color: white;
+      font-weight: 600;
+    }
+  
+    .toolbar img {
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo {
+      height: 40px;
+      margin: 0 16px;
+    }
+  
+    .toolbar #twitter-logo:hover {
+      opacity: 0.8;
+    }
+  
+    .fa-shopping-cart {
+      font-size: 50px;
+      margin: 10px;
+    }
+  </style>  
+ 
+   <!-- <div class="spacer"></div>
+    <a type="button" [routerLink]="['/dashboard']">
+      Home <i class="fas fa-home"></i>
+    </a>
+
+    <a type="button" *ngIf="user" [routerLink]="['/profile/', user.id]">
+      Profile <i class="fas fa-user"></i>
+    </a>
+    <a type="button" (click)="login()" *ngIf="!user">
+      login
+    </a>
+  </div><br>-->
+  
+  <router-outlet></router-outlet>
   
   <nav class="navbar navbar-expand-lg">
     <div class="containernav">
@@ -41,7 +102,54 @@
                     <a class="nav-link click-scroll" routerLink="/service">Our Services</a>
                 </li>
                 
-               
+             
+                <nav class="navbar navbar-expand-lg">
+                    <div class="containernav">
+                      <!-- ... -->
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                  
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto" style="padding-right: 224px;">
+                          <!-- ... -->
+                        </ul>
+                  
+                        <div class="toolbar" role="banner">
+                          <div class="toolbar-left">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span [routerLink]="['/dashboard']">Welcome to your eccommerce</span>
+                          </div>
+                          <div class="toolbar-right">
+                            <button mat-button [matMenuTriggerFor]="menu">Menu <i class="fas fa-caret-down"></i></button>
+                            <mat-menu #menu="matMenu">
+                              <button mat-menu-item *ngFor="let cat of categories"
+                                [routerLink]="['/dsiplay-category/', cat.id]">{{cat.name}}</button>
+                            </mat-menu>
+                  
+                            <div class="spacer"></div>
+                            <a type="button" [routerLink]="['/dashboard']">
+                              Home <i class="fas fa-home"></i>
+                            </a>
+                            <!--<a type="button" *ngIf="user" [routerLink]="['/profile/', user.id]">
+                              Profile <i class="fas fa-user"></i>
+                            </a>-->
+                            <!--<a type="button" (click)="login()" *ngIf="!user">
+                              login
+                            </a>-->
+                          </div>
+                        </div>
+                  
+                        <router-outlet></router-outlet>
+                  
+                        <ul class="navbar-nav ms-lg-5">
+                          <!-- ... -->
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  
+                  <router-outlet></router-outlet>
                
 
                
