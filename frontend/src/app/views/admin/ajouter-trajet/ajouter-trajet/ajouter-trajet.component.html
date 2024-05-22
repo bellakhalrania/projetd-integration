@@ -1,0 +1,41 @@
+
+<h1 class="title">Ajouter une nouvelle trajet</h1>
+<ul class="breadcrumbs">
+    <li><a >Ajouter Trajet</a></li>
+    <li class="divider">/</li>
+    <li><a routerLink="/admin/list-gare" class="active">Gare</a></li>
+</ul>
+<div  style="width: 960px;">
+<div class="card" style="padding: 40px;">
+    <div class="content-data">
+ 
+        <form #f="ngForm" (ngSubmit)="add(f)" >
+            <div class="form-group row">
+              <label for="input" class="col-sm-2 col-form-label">Station de départ</label>
+              
+                <input type="text" class="form-control" name="stationDepart" #stationDepart="ngModel" ngModel required>
+              
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Station d'arriver</label>
+                  <input type="text" class="form-control" name="stationArrive" #stationArrive="ngModel" ngModel required>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Date depart</label>
+              
+                  <input type="datetime-local" class="form-control"  name="depart" #depart="ngModel" ngModel required>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Date d'arriver'</label>
+              
+                  <input type="datetime-local" class="form-control"  name="arrive" #arrive="ngModel" ngModel required>
+              </div>
+            <div class="form-group row">
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+            </div>           
+          </form>
+
+
+</div>
+</div>
+</div>
