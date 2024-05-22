@@ -34,7 +34,7 @@ public class SecurityapicrudApplication implements CommandLineRunner{
 		  roleRepository.save(new Role("ROLE_ADMIN"));
 		roleRepository.save(new Role("ROLE_USER"));
 		roleRepository.save(new Role("ROLE_CHAUFFEUR"));
-		}
+		} 
 		
 	}
 
