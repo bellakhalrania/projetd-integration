@@ -12,7 +12,8 @@ import com.securityapicrud.services.ChauffeurService;
 
 
 @RestController
-@RequestMapping("/chauffeurs")
+@RequestMapping("/api/chauffeurs")
+
 public class ChauffeurController {
 
     @Autowired

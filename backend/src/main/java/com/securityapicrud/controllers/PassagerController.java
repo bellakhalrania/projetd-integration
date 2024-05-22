@@ -13,7 +13,8 @@ import com.securityapicrud.services.PassagerService;
 
 
 @RestController
-@RequestMapping("/passagers")
+@RequestMapping("/api/passagers")
+
 public class PassagerController {
 
     @Autowired
