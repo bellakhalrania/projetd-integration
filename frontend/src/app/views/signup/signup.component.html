@@ -1,51 +1,39 @@
-       <div class="wrapper" style="background-color: rgb(201 221 255);">
-			<div class="inner">
-				<div class="image-holder">
-					<img src="assets/registerform/images/register.jpeg" alt="">
-				</div>
-				<form #f="ngForm" (ngSubmit)="register(f)">
-					<h3>Registration Form</h3>
-					<div class="form-group">
-						<input type="text" placeholder="First Name" class="form-control"name="name" #name="ngModel" ngModel>
-						<input type="text" placeholder="Last Name" class="form-control">
-					</div>
-					<div class="form-wrapper">
-						<input type="text" placeholder="Username" class="form-control"name="username" #username="ngModel" ngModel>
-						<i class="zmdi zmdi-account"></i>
-					</div>
-					<div class="form-wrapper">
-						<input type="text" placeholder="Email Address" class="form-control"name="email" #email="ngModel" ngModel>
-						<i class="zmdi zmdi-email"></i>
-					</div>
-					<div class="form-wrapper">
-						<select name="" id="" class="form-control">
-							<option value="" disabled selected>Gender</option>
-							<option value="male">Male</option>
-							<option value="femal">Female</option>
-							<option value="other">Other</option>
-						</select>
-						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
-					</div>
-					<div class="form-wrapper">
-						<input type="password" placeholder="Password" class="form-control"name="password" #password="ngModel" ngModel>
-						<i class="zmdi zmdi-lock"></i>
-					</div>
-					<div class="form-wrapper">
-						<input type="password" placeholder="Confirm Password" class="form-control">
-						<i class="zmdi zmdi-lock"></i>
-					</div>
-					<button type="submit">Register
-						<i class="zmdi zmdi-arrow-right"></i>
-					</button>
-                    <div class="alert alert-danger" *ngIf="messageErr">
+
+		
+		
+
+<div class="body">
+
+			<div class="container" id="container">
+				<div class="form-container sign-up">
+				  <form #f="ngForm" (ngSubmit)="register(f)">
+					<h1>Create Account</h1>
+					
+					<span>or use your email for registeration</span>
+					<input type="text" placeholder="Name" name="name" #name="ngModel" ngModel />
+					<input type="text" placeholder="User name " name="username" #username="ngModel" ngModel />
+					<input type="email" placeholder="Email" name="email" #email="ngModel" ngModel />
+					<input type="password" placeholder="Password" name="password" #password="ngModel" ngModel />
+					<button type="submit">Register</button>
+					<div class="alert alert-danger" *ngIf="messageErr">
                         {{messageErr}}
                     </div>
-                    <div class="text-center mt-3">
-                        <p>Vous avez déja un compte ? <a routerLink="/login" >Connexion..</a>.</p>
-                        <p> <a routerLink="/" >annuler?</a></p>
-                    </div>
-				</form>
-                
-			</div>
-		
+					<p> <a routerLink="/" >annuler?</a></p>
+				  </form>
+				</div>
+				
+				<div class="toggle-container">
+				  <div class="toggle">
+					<div class="toggle-panel toggle-left">
+					  <h1>Welcome Back!</h1>
+					  <img src="assets/front/signin.png" alt="" style="width: 80%;">
+					  <p>Vous avez déja un compte ? <a routerLink="/login" >Connexion..</a>.</p>
+					  <button class="hidden" id="login" routerLink="/login">Sign In</button>
+					</div>
+					
+					</div>
+				  </div>
+				</div>
+			  </div>
+
 		

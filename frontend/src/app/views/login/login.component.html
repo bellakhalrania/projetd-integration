@@ -1,44 +1,51 @@
-<div class="wrapper" style="background-color: rgb(201 221 255);">
-        <div class="inner">
-            <div class="image-holder">
-                <img src="assets/registerform/images/register.jpeg" alt="">
-            </div>
-            <form  #f="ngForm" (ngSubmit)="loginUser(f)">
-                <h3>Connexion !</h3>
+  <div class="body">
+        <div class="container" id="container">
+            
+            <div class="form-container sign-in">
                 
-                <div class="form-wrapper">
-                    <input type="text" placeholder="Email Address" class="form-control"name="usernameOrEmail" #usernameOrEmail="ngModel" ngModel>
-                    <i class="zmdi zmdi-email"></i>
-                </div>
-                <div class="form-wrapper">
-                    <select name="" id="" class="form-control">
-                        <option value="" disabled selected>Role</option>
-                        <option value="male">Passager</option>
-                        <option value="femal">chauffeur</option>
-                       
-                    </select>
-                    <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
-                </div>
-                <div class="form-wrapper">
-                    <input type="password" placeholder="Password" class="form-control" name="password" #password="ngModel" ngModel>
-                    <i class="zmdi zmdi-lock"></i>
+              <form #f="ngForm" (ngSubmit)="loginUser(f)">
+                <h1>Connexion !</h1>
+                <div class="social-icons">
+                  <a href="#" class="icon"
+                    ><i class="fa-brands fa-google-plus-g"></i
+                  ></a>
+                  <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="icon"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
                 </div>
                 
-                <button type="submit">Entrer
-                    <i class="zmdi zmdi-arrow-right"></i>
-                </button>
+                <input type="text" class="form-control" placeholder="Email" name="usernameOrEmail" #usernameOrEmail="ngModel" ngModel />
+                <input type="password" class="form-control" placeholder="Password" name="password" #password="ngModel" ngModel />
+               
+               
+                <button type="submit" >Connexion</button>
                 <div class="alert alert-danger" *ngIf="messageErr">
                     {{messageErr}}
                 </div>
-                <div class="text-center mt-3">
-                    <p>Vous n'avez pas de compte ? <a routerLink="/signup" >Inscrivez-vous ici</a>.</p>
-                    <p> <a routerLink="/" >annuler?</a></p>
+                <p> <a routerLink="/" >annuler?</a></p>
+              </form>
+            </div>
+            <div class="toggle-container">
+              <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                  <h1>Welcome Back!</h1>
+                  <p>Enter your personal details to use all of site features</p>
+                  <button class="hidden" id="login">Sign In</button>
                 </div>
+                <div class="toggle-panel toggle-right">
+                  <h1>Hello, Friend!</h1>
+                  <img src="assets/front/signin2.png" alt="" style="width: 80%;">
+                 
+                   
+                    <p>Vous n'avez pas de compte ? <a routerLink="/signup" >Inscrivez-vous ici</a>.</p>
                 
-            </form>
-            
-        </div>
-    
-    
+                  <button class="hidden" id="register" routerLink="/signup">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>    
 
 
+        </div>  

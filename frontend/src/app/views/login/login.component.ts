@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { AfterViewInit, Component, OnInit} from '@angular/core';
+
 import { DataService } from '../services/data.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -9,7 +9,8 @@ import { HttpErrorResponse } from '@angular/common/http';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit{
+ 
  
   constructor( private ds:DataService,private route:Router) { 
     console.log(this.ds.loggedIn)
@@ -53,6 +54,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+ 
   
 
 }
