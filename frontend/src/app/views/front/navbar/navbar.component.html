@@ -121,11 +121,11 @@
                             <span [routerLink]="['/dashboard']">Welcome to your eccommerce</span>
                           </div>
                           <div class="toolbar-right">
-                            <button mat-button [matMenuTriggerFor]="menu">Menu <i class="fas fa-caret-down"></i></button>
-                            <mat-menu #menu="matMenu">
+                            <button mat-button >Menu <i class="fas fa-caret-down"></i></button>
+                          
                               <button mat-menu-item *ngFor="let cat of categories"
                                 [routerLink]="['/dsiplay-category/', cat.id]">{{cat.name}}</button>
-                            </mat-menu>
+                            
                   
                             <div class="spacer"></div>
                             <a type="button" [routerLink]="['/dashboard']">
