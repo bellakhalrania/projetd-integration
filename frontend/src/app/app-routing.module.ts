@@ -26,7 +26,7 @@ const routes: Routes = [
     {path:'contact',loadChildren:()=>import('./views/passager/contact-from/contact-from.module').then(m=>m.ContactFromModule)},
     {path:'liste-gare',loadChildren:()=>import('./views/passager/listes-gare/listes-gare.module').then(m=>m.ListesGareModule)},
     {path:'liste-trajet',loadChildren:()=>import('./views/passager/listes-trajet/listes-trajet.module').then(m=>m.ListesTrajetModule)},
-    {path:'liste-chauffre',loadChildren:()=>import('./views/passager/chauffre-profile/chauffre-profile.module').then(m=>m.ChauffreProfileModule)},
+    {path:'liste-chauffeur',loadChildren:()=>import('./views/passager/chauffre-profile/chauffre-profile.module').then(m=>m.ChauffreProfileModule)},
   ]},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
