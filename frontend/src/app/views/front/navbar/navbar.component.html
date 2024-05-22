@@ -1,177 +1,70 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="containernav">
+      <a class="navbar-brand" href="index.html">
+
+          <img src="../assets/passager/images/logo.png" style="    width: 158px;
+          
+          padding-left: 20px;
+          padding-top: 10px;
+          height: 72px;">
+      </a>
+
+      <div class="d-lg-none ms-auto me-4">
+          <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-lg-5 me-lg-auto" style="    padding-right: 224px;">
+              <li class="nav-item">
+                  <a class="nav-link click-scroll" routerLink="/passager/start">Home</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link click-scroll" href="#section_2">Browse Topics</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link click-scroll" href="#section_3">How it works</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="nav-link click-scroll" routerLink="/passager/contact" >Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                    <li><a class="dropdown-item" >Contact Form</a></li>
+
+                </ul>
+            </li>
+        </ul>
 
 
-<style>
-    body {
-      font-family: initial;
-      font-size: 16px;
-    }
-  
-    .spacer {
-      flex: 1;
-    }
-  
-    a {
-      margin-right: 20px;
-      color: aliceblue;
-    }
-  
-    .toolbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      background-color: #1976d2;
-      color: white;
-      font-weight: 600;
-    }
-  
-    .toolbar img {
-      margin: 0 16px;
-    }
-  
-    .toolbar #twitter-logo {
-      height: 40px;
-      margin: 0 16px;
-    }
-  
-    .toolbar #twitter-logo:hover {
-      opacity: 0.8;
-    }
-  
-    .fa-shopping-cart {
-      font-size: 50px;
-      margin: 10px;
-    }
-  </style>  
- 
-   <!-- <div class="spacer"></div>
-    <a type="button" [routerLink]="['/dashboard']">
-      Home <i class="fas fa-home"></i>
-    </a>
+        <ul class="navbar-nav ms-lg-5 ">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
 
-    <a type="button" *ngIf="user" [routerLink]="['/profile/', user.id]">
-      Profile <i class="fas fa-user"></i>
-    </a>
-    <a type="button" (click)="login()" *ngIf="!user">
-      login
-    </a>
-  </div><br>-->
-  
-  <router-outlet></router-outlet>
-  
-  <nav class="navbar navbar-expand-lg">
-    <div class="containernav">
-        <a class="navbar-brand" href="index.html">
-            
-            <img src="../assets/passager/images/logo.png" style="    width: 158px;
-            
-            padding-left: 20px;
-            padding-top: 10px;
-            height: 72px;">
-        </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                  <li><a class="dropdown-item" routerLink="/signup">Registre</a></li>
+                  <li><a class="dropdown-item" routerLink="/login">Login</a></li>
 
-        <div class="d-lg-none ms-auto me-4">
-            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-        </div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-lg-5 me-lg-auto" style="    padding-right: 224px;">
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" routerLink="/home">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" routerLink="/home">À PROPOS</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" routerLink="/contact">Contact</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" routerLink="/destination">Destination</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" routerLink="/service">Our Services</a>
-                </li>
-                
-             
-                <nav class="navbar navbar-expand-lg">
-                    <div class="containernav">
-                      <!-- ... -->
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                  
-                      <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-5 me-lg-auto" style="padding-right: 224px;">
-                          <!-- ... -->
-                        </ul>
-                  
-                        <div class="toolbar" role="banner">
-                          <div class="toolbar-left">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span [routerLink]="['/dashboard']">Welcome to your eccommerce</span>
-                          </div>
-                          <div class="toolbar-right">
-                            <button mat-button >Menu <i class="fas fa-caret-down"></i></button>
-                          
-                              <button mat-menu-item *ngFor="let cat of categories"
-                                [routerLink]="['/dsiplay-category/', cat.id]">{{cat.name}}</button>
-                            
-                  
-                            <div class="spacer"></div>
-                            <a type="button" [routerLink]="['/dashboard']">
-                              Home <i class="fas fa-home"></i>
-                            </a>
-                            <!--<a type="button" *ngIf="user" [routerLink]="['/profile/', user.id]">
-                              Profile <i class="fas fa-user"></i>
-                            </a>-->
-                            <!--<a type="button" (click)="login()" *ngIf="!user">
-                              login
-                            </a>-->
-                          </div>
-                        </div>
-                  
-                        <router-outlet></router-outlet>
-                  
-                        <ul class="navbar-nav ms-lg-5">
-                          <!-- ... -->
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-                  
-                  <router-outlet></router-outlet>
-               
-
-               
+                </ul>
+              </li>
             </ul>
-            
-            
-            <ul class="navbar-nav ms-lg-5">
-                <li class="nav-item dropdown" >
-                    <a class="nav-link click-scroll">Se Connecter</a>
-
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                      <li><a class="dropdown-item" routerLink="/signup">Registre</a></li>
-                      <li><a class="dropdown-item" routerLink="/login">Login</a></li>
-                       
-                    </ul>
-                </li>
-            </ul>
-       
-           
-            
-                
-        
+            <div class="d-none d-lg-block">
+                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+            </div>
+          </div>
         </div>
-    </div>
-</nav>
+    </nav>
