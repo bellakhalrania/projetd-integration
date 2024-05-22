@@ -57,14 +57,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
-import { NavbarComponent } from './views/front/navbar/navbar.component';
+
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent,SignupComponent, 
+    AppComponent,LoginComponent,SignupComponent,
    
   ],
   imports: [
