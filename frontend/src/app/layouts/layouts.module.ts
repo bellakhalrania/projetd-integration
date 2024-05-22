@@ -11,6 +11,7 @@ import { ServiceComponent } from '../views/front/service/service.component';
 import { ContactComponent } from '../views/front/contact/contact.component';
 import { PassagerLayoutComponent } from './passager-layout/passager-layout.component';
 import { FooterComponent } from '../views/front/footer/footer.component';
+import { ChauffeurLayoutComponent } from './chauffeur-layout/chauffeur-layout.component';
 
 
 
@@ -24,7 +25,8 @@ import { FooterComponent } from '../views/front/footer/footer.component';
     ServiceComponent,
     ContactComponent,
     PassagerLayoutComponent,
-    FooterComponent
+    FooterComponent,
+    ChauffeurLayoutComponent
    
 
     
