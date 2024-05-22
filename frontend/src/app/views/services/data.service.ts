@@ -64,4 +64,17 @@ export class DataService {
   updategare(id:string,newdata:any){
     return this.http.put('http://localhost:8085/api/gare/'+id,newdata)
   }
+  /****************************trajet**********************/
+  getAllTrajets(){
+    return this.http.get('http://localhost:8085/api/AllTrajet')
+  }
+  addTrajet(trajet:any){
+    return this.http.post('http://localhost:8085/api/trajet',trajet);
+  }
+  deleteTrajet(id:any){
+    return this.http.delete('http://localhost:8085/api/trajet/'+id)
+  }
+  updateTrajet(id:string,newdata:any){
+    return this.http.put('http://localhost:8085/api/trajet/'+id,newdata)
+  }
 }

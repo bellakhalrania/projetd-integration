@@ -8,6 +8,7 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { ListGareModule } from './views/admin/list-gare/list-gare.module';
 import { DashboardModule } from './views/admin/dashboard/dashboard.module';
 import { AjouterGareModule } from './views/admin/ajouter-gare/ajouter-gare.module';
+import { AjouterTrajetModule } from './views/admin/ajouter-trajet/ajouter-trajet.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -17,6 +18,7 @@ import { UsersModule } from './views/admin/users/users.module';
 import { StartPassagerModule } from './views/passager/start-passager/start-passager.module';
 import { ContactFromModule } from './views/passager/contact-from/contact-from.module';
 import { ListesGareModule } from './views/passager/listes-gare/listes-gare.module';
+import { ListesTrajetModule } from './views/passager/listes-trajet/listes-trajet.module';
 import { ChauffreProfileModule } from './views/passager/chauffre-profile/chauffre-profile.module';/*
 import { ServicesComponent } from './views/front/services/services.component';*/
 
@@ -58,9 +60,11 @@ import { MatTreeModule } from '@angular/material/tree';
 import { NavbarComponent } from './views/front/navbar/navbar.component';
 
 
+
+
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent,SignupComponent
+    AppComponent,LoginComponent,SignupComponent, 
    
   ],
   imports: [
@@ -69,7 +73,7 @@ import { NavbarComponent } from './views/front/navbar/navbar.component';
     AppRoutingModule,LayoutsModule,ListGareModule,
     DashboardModule,AjouterGareModule,HttpClientModule,
     UsersModule,StartPassagerModule,ContactFromModule,
-    ListesGareModule,ChauffreProfileModule,
+    ListesGareModule,ChauffreProfileModule,AjouterTrajetModule,ListesTrajetModule,
     MatCheckboxModule,
     MatChipsModule,
     MatStepperModule,

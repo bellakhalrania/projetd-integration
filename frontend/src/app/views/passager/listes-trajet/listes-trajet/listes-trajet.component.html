@@ -7,11 +7,11 @@
                     <ol class="bread">
                         <li class="breadcrumb-item"><a >Homepage</a></li>
 
-                        <li class="breadcrumb-item active" aria-current="page">listes des gares</li>
+                        <li class="breadcrumb-item active" aria-current="page">listes des Trajets</li>
                     </ol>
                 </ul>
 
-                <h2 class="text-white">consulter liste des gares</h2>
+                <h2 class="text-white">consulter liste des trajets</h2>
             </div>
 
         </div>
@@ -40,27 +40,26 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col"></th>
-                <th>Nom de gare</th>
-                <th>Lieu</th>
-                <th>Adresse</th>
-                <th>option</th>
+                <th>Station de Depart</th>
+                <th>Station d'arriver</th>
+                <th>Date Depart</th>
+                <th>Date Arriver</th>
+                <th>Bus ID</th>
               </tr>
             </thead>
             <tbody>
-        
                 <tr *ngFor="let item of dataArray;index as i">
-                  <td>{{i+1}}</td>
-                  <td class="icon">
-                    <img src="assets/admin/images/gare (1).png" class="icon-img" alt="image" />
-                  </td>
-                  <td>{{item.nom_Gare}}</td>
-                  <td>
-                    {{item.lieu}}
-                  </td>
-                  <td>{{item.address}}</td>
-              </tr>
-                
-              </tbody>
+                    <td>{{i+1}}</td>
+                    <td class="icon">
+                      <img src="assets/admin/images/gare (1).png" class="icon-img" alt="image" />
+                    </td>
+                    <td>{{item.stationDepart}}</td>
+                    <td> {{item.stationArrive}}</td>
+                    <td>{{item.depart}}</td>
+                    <td>{{item.arrive}}</td>
+                    <td> 
+                </tr> 
+            </tbody>
           </table>
     </div>
 </div>
