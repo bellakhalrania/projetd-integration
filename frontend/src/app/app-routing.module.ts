@@ -41,7 +41,7 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'chauffeur',component:ChauffeurLayoutComponent,children:[
     {path:'',loadChildren:()=>import('./views/chauffeur/dashboard/dashboard/dashboard.module').then(m=>m.DashboardModule)},
-    //{path:'/ajouterDemande',loadChildren:()=>import('./views/chauffeur/ajouterDemande/ajouter-demande/ajouter-demande.module').then(m=>m.AjouterDemandeModule)},
+    {path:'/ajouterDemande',loadChildren:()=>import('./views/chauffeur/ajouter-demande/ajouter-demande.module').then(m=>m.AjouterDemandeModule)},
 
   ]},
   
