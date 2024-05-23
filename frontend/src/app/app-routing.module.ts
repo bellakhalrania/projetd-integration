@@ -20,7 +20,16 @@ const routes: Routes = [
     {path:'offre',loadChildren:()=>import('./views/admin/offre-admin/offre-admin.module').then(m=>m.OffreAdminModule)},
     {path:'users',loadChildren:()=>import('./views/admin/users/users.module').then(m=>m.UsersModule)},
     {path:'profile',loadChildren:()=>import('./views/admin/profile-admin/profile-admin.module').then(m=>m.ProfileAdminModule)},
+    {path:'profile',loadChildren:()=>import('./views/admin/profile-admin/profile-admin.module').then(m=>m.ProfileAdminModule)},
+    {path:'addchauffeur',loadChildren:()=>import('./views/admin/chauffeurs/addchauffeur/addchauffeur.module').then(m=>m.AddchauffeurModule)},
+    {path:'listechauffeur',loadChildren:()=>import('./views/admin/chauffeurs/listechauffeur/listechauffeur.module').then(m=>m.ListechauffeurModule)},
+    {path:'addbus',loadChildren:()=>import('./views/admin/buses/addbus/addbus.module').then(m=>m.AddbusModule)},
+    {path:'listebus',loadChildren:()=>import('./views/admin/buses/listebus/listebus.module').then(m=>m.ListebusModule)},
+    {path:'addpassager',loadChildren:()=>import('./views/admin/passagers/addpassager/addpassager.module').then(m=>m.AddpassagerModule)},
+    {path:'listepassager',loadChildren:()=>import('./views/admin/passagers/listepassager/listepassager.module').then(m=>m.ListepassagerModule)},
   ]},
+
+
   {path:'passager',component:PassagerLayoutComponent,children:[
     {path:'start',loadChildren:()=>import('./views/passager/start-passager/start-passager.module').then(m=>m.StartPassagerModule)},
     {path:'contact',loadChildren:()=>import('./views/passager/contact-from/contact-from.module').then(m=>m.ContactFromModule)},

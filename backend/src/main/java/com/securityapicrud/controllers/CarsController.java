@@ -5,11 +5,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.securityapicrud.entity.Cars;
+import com.securityapicrud.entity.Gare;
+import com.securityapicrud.entity.Trajet;
 import com.securityapicrud.services.CarsService;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -27,10 +29,11 @@ public class CarsController {
     }
 
     @GetMapping
-    public ResponseEntity<Set<Cars>> getAllCars() {
-        Set<Cars> carsList = carsService.getAllCars();
-        return new ResponseEntity<>(carsList, HttpStatus.OK);
+    public List<Cars> getAllCars() {
+        List<Cars> carsList = carsService.getAllCars();
+        return carsList;
     }
+   
 
     @GetMapping("/{id}")
     public ResponseEntity<Cars> getOneCars(@PathVariable Long id) {
@@ -43,17 +46,24 @@ public class CarsController {
         if (carsService.getOneCars(id) == null) {
             return ResponseEntity.notFound().build();
         }
-        cars.setIdBus(id);
+        cars.setId(id);
         Cars updatedCars = carsService.updateCars(cars);
         return ResponseEntity.ok(updatedCars);
     }
+    
+ 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCars(@PathVariable Long id) {
+    public ResponseEntity<?> deleteCars(@PathVariable Long id) {
         if (carsService.getOneCars(id) == null) {
             return ResponseEntity.notFound().build();
         }
         carsService.deleteCarsById(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok().build();
+        
+        
     }
+    
+    
+    
 }

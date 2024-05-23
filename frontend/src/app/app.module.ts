@@ -56,6 +56,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { AddpassagerModule } from './views/admin/passagers/addpassager/addpassager.module';
+import { ListepassagerModule } from './views/admin/passagers/listepassager/listepassager.module';
+import { AddbusModule } from './views/admin/buses/addbus/addbus.module';
+import { ListebusModule } from './views/admin/buses/listebus/listebus.module';
+import { AddchauffeurModule } from './views/admin/chauffeurs/addchauffeur/addchauffeur.module';
+import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/listechauffeur.module';
 
 
 
@@ -74,6 +80,8 @@ import { MatTreeModule } from '@angular/material/tree';
     DashboardModule,AjouterGareModule,HttpClientModule,
     UsersModule,StartPassagerModule,ContactFromModule,
     ListesGareModule,ChauffreProfileModule,AjouterTrajetModule,ListesTrajetModule,
+    AddpassagerModule,ListepassagerModule,AddbusModule,ListebusModule,
+    AddchauffeurModule,ListechauffeurModule,
     MatCheckboxModule,
     MatChipsModule,
     MatStepperModule,

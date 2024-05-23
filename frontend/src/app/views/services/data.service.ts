@@ -52,6 +52,7 @@ export class DataService {
   getuserByUsername(username:any){
     return this.http.get('http://localhost:8085/api/auth/getUsername/'+username)
   }
+  /*****************************gare********************************* */
   getAllGare(){
     return this.http.get('http://localhost:8085/api/AllGare')
   }
@@ -76,5 +77,18 @@ export class DataService {
   }
   updateTrajet(id:string,newdata:any){
     return this.http.put('http://localhost:8085/api/trajet/'+id,newdata)
+  }
+  /**********************************bus************************************* */
+  getAllbus(){
+    return this.http.get('http://localhost:8085/api/cars')
+  }
+  addbus(bus:any){
+    return this.http.post('http://localhost:8085/api/cars',bus);
+  }
+  deletebus(id:any){
+    return this.http.delete('http://localhost:8085/api/cars/'+id)
+  }
+  updatebus(id:string,newdata:any){
+    return this.http.put('http://localhost:8085/api/cars/'+id,newdata)
   }
 }

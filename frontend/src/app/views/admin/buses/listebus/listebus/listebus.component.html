@@ -1,0 +1,124 @@
+<h1 class="title">Liste des buses</h1>
+<ul class="breadcrumbs">
+    <li><a href="#">Listes des buses</a></li>
+    <li class="divider">/</li>
+    <li><a href="#" class="active">bus</a></li>
+</ul>
+<div  style="width: 1200px;">
+<div class="card" style="padding: 40px;">
+    <div class="content-data">
+
+<div class="head">
+    <h3></h3>
+    <div class="menu">
+        <button type="button" class="btn btn-info" routerLink="/admin/addbus" > Ajouter bus </button>
+        
+        
+    </div>
+</div>
+
+           
+    
+    
+
+
+<table class="table">
+    <thead>
+        <tr>
+          <th>#</th>
+          <th></th>
+          <th>Nom</th>
+          <th>matricule</th>
+          <th>model</th>
+          <th>line</th>
+          <th>etat</th>
+          <th>option</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let item of dataArray;index as i">
+          <td>{{i+1}}</td>
+          <td class="icon">
+            <img src="assets/admin/images/gare (1).png" class="icon-img" alt="image" />
+          </td>
+          <td>{{item.name}}</td>
+          <td>
+            {{item.matricule}}
+          </td>
+          <td>{{item.modele}}</td>
+          <td>{{item.line}}</td>
+          <td>{{item.etat}}</td>
+   
+            <td> <button class="btn btn-danger" (click)="deletebus(item.id,i)" style="margin-right: 12px;">
+              <i class="fas fa-trash-alt"></i> 
+            </button>
+          
+            <button class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal" (click)="getdata(item.name,item.matricule,item.modele,item.line,item.etat,item.id)">
+              <i class="fas fa-eye"></i> 
+            </button></td>
+        </tr>
+        
+      </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+
+
+
+<!-- Structure du modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- En-tête du modal -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modifier</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Contenu du modal -->
+      <div class="modal-body">
+        <form #f="ngForm" (ngSubmit)="update(f)" >
+          <div class="form-group row">
+            <label for="input" class="col-sm-2 col-form-label">Nom </label>
+            
+              <input type="text" class="form-control" [(ngModel)]="databus.name" name="name" #name="ngModel" ngModel required>
+            
+          </div>
+          <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Matricule</label>
+                <input type="text" class="form-control" [(ngModel)]="databus.matricule" name="matricule" #matricule="ngModel" ngModel required>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">modele</label>
+            
+                <input type="text" class="form-control" [(ngModel)]="databus.modele" name="modele" #modele="ngModel" ngModel required>
+           
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">line</label>
+            
+                <input type="text" class="form-control" [(ngModel)]="databus.line" name="line" #line="ngModel" ngModel required>
+           
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">etat</label>
+            
+                <input type="text" class="form-control" [(ngModel)]="databus.etat" name="etat" #etat="ngModel" ngModel required>
+           
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <button type="submit" class="btn btn-primary">Modifier</button>
+          </div>           
+        </form>
+      </div>
+      <!-- Pied du modal -->
+      
+    </div>
+  </div>
+</div>
