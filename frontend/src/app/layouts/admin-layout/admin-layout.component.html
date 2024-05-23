@@ -15,6 +15,10 @@
             </ul>
         </li>
         <li>
+            <a routerLink="/admin/listebus"><i class="bi bi-building-fill icon" ></i> Buses <i class='bx bx-chevron-right icon-right' ></i></a>
+            
+        </li>
+        <li>
             <a routerLink="/admin/offre"><i class="bi bi-boxes icon"></i> Offres <i class='bx bx-chevron-right icon-right' ></i></a>
             <ul class="side-dropdown">
                 <li><a href="#">Ajouter offre</a></li>
@@ -23,9 +27,9 @@
         </li>
         <li><a ><i class='bi bi-archive icon' ></i> Demandes</a></li>
         <li>
-            <a><i class='bi bi-people-fill icon' ></i> Chauffeures<i class='bx bx-chevron-right icon-right' ></i></a>
+            <a routerLink="/admin/listechauffeur"><i class='bi bi-people-fill icon' ></i> Chauffeures<i class='bx bx-chevron-right icon-right' ></i></a>
             <ul class="side-dropdown">
-                <li><a>ajouter Chauffeures</a></li>
+                <li><a routerLink="/admin/addchauffeur">ajouter Chauffeures</a></li>
                 <li><a >demande de congé</a></li>
             </ul>
         </li>
@@ -33,9 +37,9 @@
             <a routerLink="/admin/users"><i class='bi bi-people-fill icon' ></i>Users<i class='bx bx-chevron-right icon-right' ></i></a>
             
         </li>
-        <li><a><i class='bi bi-calendar4 icon' ></i> Calendrier</a></li>
+        
         <li>
-            <a ><i class='bi bi-people-fill icon' ></i>Compte passager<i class='bx bx-chevron-right icon-right' ></i></a>
+            <a routerLink="/admin/listepassager"><i class='bi bi-people-fill icon' ></i>Compte passager<i class='bx bx-chevron-right icon-right' ></i></a>
             
         </li>
         <li>
@@ -45,6 +49,7 @@
                
                 </ul>
         </li>
+        <li><a><i class='bi bi-calendar4 icon' ></i> Calendrier</a></li>
     </ul>
     <div class="ads">
         <div class="wrapper">
