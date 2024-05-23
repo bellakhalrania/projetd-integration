@@ -10,10 +10,12 @@ import { DataService } from 'src/app/views/services/data.service';
 export class ListebusComponent implements OnInit {
 
   dataArray : any=[];
-  dataGare={ 
-    nom_Gare:'',
-    lieu:'',
-    address:'',
+  databus={ 
+    name:'',
+    matricule:'',
+    modele:'',
+    line:'',
+    etat:'',
     id:''
   }
   messageErr=''
@@ -21,39 +23,44 @@ export class ListebusComponent implements OnInit {
   messageSuccess=''
 
   constructor(private ds:DataService) {
-    this.ds.getAllGare().subscribe(data=>{
+    this.ds.getAllbus().subscribe(data=>{
     this.dataArray=data  
     console.log(data);
     })
    }
 
-   deletegare(id:any,i:number){
-    this.ds.deletegare(id).subscribe(response=>{
+   deletebus(id:any,i:number){
+    this.ds.deletebus(id).subscribe(response=>{
     console.log(response)
     this.dataArray.splice(i,1)})
     
   }
 
-  getdata(nom_Gare:string,lieu:string,address:string,id:any){
+  getdata(name:string,matricule:string,modele:string,line:string,etat:string,id:any){
     this.messageSuccess=''
-    this.dataGare.nom_Gare=nom_Gare;
-    this.dataGare.lieu=lieu;
-    this.dataGare.address=address;
-    this.dataGare.id=id;
+    this.databus.name=name;
+    this.databus.matricule=matricule;
+    this.databus.modele=modele;
+    this.databus.line=line;
+    this.databus.etat=etat;
+    this.databus.id=id;
+    
   }
 
   update(f: any) {
     let data= f.value
-    this.ds.updategare(this.dataGare.id,data).subscribe(
+    this.ds.updatebus(this.databus.id,data).subscribe(
       response=>{
         console.log(response)
-        let indexid = this.dataArray.findIndex((obj: any) => obj.id == this.dataGare.id);
+        let indexid = this.dataArray.findIndex((obj: any) => obj.id == this.databus.id);
         if (indexid !== -1 && this.dataArray[indexid]) {
-          this.dataArray[indexid].nom_Gare = data.nom_Gare;
-          this.dataArray[indexid].lieu = data.lieu;
-          this.dataArray[indexid].address = data.address;
+          this.dataArray[indexid].name = data.name;
+          this.dataArray[indexid].matricule = data.matricule;
+          this.dataArray[indexid].modele = data.modele;
+          this.dataArray[indexid].line = data.line;
+          this.dataArray[indexid].etat = data.etat;
        
-          this.messageSuccess = ` gare modifé`;
+          this.messageSuccess = ` bus modifé`;
         } else {
           console.error('Error: Invalid index or dataArray element is undefined.');
         }

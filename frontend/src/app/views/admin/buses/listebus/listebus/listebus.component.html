@@ -11,7 +11,7 @@
 <div class="head">
     <h3></h3>
     <div class="menu">
-        <button type="button" class="btn btn-info" routerLink="/admin/ajouter-gare" > Ajouter bus </button>
+        <button type="button" class="btn btn-info" routerLink="/admin/addbus" > Ajouter bus </button>
         
         
     </div>
@@ -27,9 +27,11 @@
         <tr>
           <th>#</th>
           <th></th>
-          <th>Nom de gare</th>
-          <th>Lieu</th>
-          <th>Adresse</th>
+          <th>Nom</th>
+          <th>matricule</th>
+          <th>model</th>
+          <th>line</th>
+          <th>etat</th>
           <th>option</th>
           <th></th>
         </tr>
@@ -41,18 +43,19 @@
           <td class="icon">
             <img src="assets/admin/images/gare (1).png" class="icon-img" alt="image" />
           </td>
-          <td>{{item.nom_Gare}}</td>
+          <td>{{item.name}}</td>
           <td>
-            {{item.lieu}}
+            {{item.matricule}}
           </td>
-          <td>{{item.address}}</td>
-         
+          <td>{{item.modele}}</td>
+          <td>{{item.line}}</td>
+          <td>{{item.etat}}</td>
    
-            <td> <button class="btn btn-danger" (click)="deletegare(item.id,i)" style="margin-right: 12px;">
+            <td> <button class="btn btn-danger" (click)="deletebus(item.id,i)" style="margin-right: 12px;">
               <i class="fas fa-trash-alt"></i> 
             </button>
           
-            <button class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal" (click)="getdata(item.nom_Gare,item.lieu,item.address,item.id)">
+            <button class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal" (click)="getdata(item.name,item.matricule,item.modele,item.line,item.etat,item.id)">
               <i class="fas fa-eye"></i> 
             </button></td>
         </tr>
@@ -80,20 +83,32 @@
       <!-- Contenu du modal -->
       <div class="modal-body">
         <form #f="ngForm" (ngSubmit)="update(f)" >
-          <div class="form-group">
-            <label for="input" class="col-form-label">Nom de la gare</label>
+          <div class="form-group row">
+            <label for="input" class="col-sm-2 col-form-label">Nom </label>
             
-              <input type="text" class="form-control" [(ngModel)]="dataGare.nom_Gare" name="nom_Gare" #nom_Gare="ngModel"  ngModel required>
+              <input type="text" class="form-control" [(ngModel)]="databus.name" name="name" #name="ngModel" ngModel required>
             
           </div>
-          <div class="form-group">
-              <label for="inputEmail3" class="col-form-label">lieu</label>
-                <input type="text" class="form-control"  [(ngModel)]="dataGare.lieu" name="lieu" #lieu="ngModel"  ngModel required>
+          <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Matricule</label>
+                <input type="text" class="form-control" [(ngModel)]="databus.matricule" name="matricule" #matricule="ngModel" ngModel required>
             </div>
-            <div class="form-group">
-              <label for="inputEmail3" class="col-form-label">adresse</label>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">modele</label>
             
-                <input type="text" class="form-control" [(ngModel)]="dataGare.address"  #address="ngModel"  name="address"  ngModel required>
+                <input type="text" class="form-control" [(ngModel)]="databus.modele" name="modele" #modele="ngModel" ngModel required>
+           
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">line</label>
+            
+                <input type="text" class="form-control" [(ngModel)]="databus.line" name="line" #line="ngModel" ngModel required>
+           
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">etat</label>
+            
+                <input type="text" class="form-control" [(ngModel)]="databus.etat" name="etat" #etat="ngModel" ngModel required>
            
             </div>
           <div class="modal-footer">

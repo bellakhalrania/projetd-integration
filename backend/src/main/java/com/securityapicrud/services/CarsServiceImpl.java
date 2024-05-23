@@ -1,6 +1,7 @@
 package com.securityapicrud.services;
 
-import java.util.Set;
+import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,14 +25,14 @@ public class CarsServiceImpl implements CarsService {
 	}
 
 	@Override
-	public Set<Cars> getAllCars() {
-		 Set<Cars> all = (Set<Cars>)carsRepos.findAll();
-		return all;
-	}
+	public List<Cars> getAllCars() {
+        return carsRepos.findAll();
+    }
 
 	@Override
 	public Cars getOneCars(long id) {
-		return carsRepos.findById(id).get();
+		return  carsRepos.findById(id).orElse(null);
+	
 	}
 
 	@Override
@@ -46,9 +47,10 @@ public class CarsServiceImpl implements CarsService {
 	}
 
 	@Override
-	public void deleteCars(Cars c) {
-		carsRepos.delete(c);
+	public void deleteCars(Long id) {
+		carsRepos.deleteById(id);
 	}
+	
 
 	@Override
 	public void deleteCarsById(Long id) {

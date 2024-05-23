@@ -14,8 +14,8 @@ export class AddbusComponent implements OnInit {
   add(f:any){
     let data=f.value;
     console.log(data);
-     this.ds.addGare(data).subscribe(data=>console.log(data));
-     this.route.navigate(['admin/list-gare'])
+     this.ds.addbus(data).subscribe(data=>console.log(data));
+     this.route.navigate(['admin/listebus'])
   }
   
   ngOnInit(): void {
