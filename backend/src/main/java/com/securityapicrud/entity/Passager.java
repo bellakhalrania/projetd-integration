@@ -1,12 +1,13 @@
 package com.securityapicrud.entity;
 
 import jakarta.persistence.Entity;
-import lombok.*;
+
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
+
 @Entity
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class Passager extends Personne {
