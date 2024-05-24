@@ -1,9 +1,16 @@
 package com.securityapicrud.entity;
 
 import jakarta.persistence.*;
+
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashSet;
 import java.util.Set;
 
+
+@Getter
+@Setter
 @Entity
 public class Chauffeur extends Personne{
     private double salaire;
@@ -26,11 +33,19 @@ public class Chauffeur extends Personne{
     
        
 
-    public Chauffeur(String email, String Prenom, String nom, String password, String role,String note,double salaire) {
-		super(email, Prenom, nom, password, role);
-		this.note=note;
-		this.salaire=salaire;
+  
+	public Chauffeur(String nom, String prenom, String email, String password, String role, double salaire,
+			String note, Set<Cars> cars) {
+		super(nom, prenom, email, password, role);
+		this.salaire = salaire;
+		this.note = note;
+		this.cars = cars;
 	}
+
+
+
+
+
 
 
 

@@ -25,12 +25,13 @@ public class Passager extends Personne {
 	public void setNombreTicket(int nombreTicket) {
 		this.nombreTicket = nombreTicket;
 	}
-	public Passager(String email, String Prenom, String nom, String password, String role, String position,
+	public Passager(Long id, String nom, String prenom, String email, String password, String role, String position,
 			int nombreTicket) {
-		super(email, Prenom, nom, password, role);
+		super(id, nom, prenom, email, password, role);
 		this.position = position;
 		this.nombreTicket = nombreTicket;
 	}
+	
 	
 }
 
