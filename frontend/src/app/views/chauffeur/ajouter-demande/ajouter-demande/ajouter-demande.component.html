@@ -1,26 +1,69 @@
-<div class="wrapper">
-    <div class="inner">
-        <form action="">
-            <h3>Contact Us</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            <label class="form-group">
-                <input type="text" class="form-control"  required>
-                <span>Your Name</span>
-                <span class="border"></span>
-            </label>
-            <label class="form-group">
-                <input type="text" class="form-control"  required>
-                <span for="">Your Mail</span>
-                <span class="border"></span>
-            </label>
-            <label class="form-group" >
-                <textarea name="" id="" class="form-control" required></textarea>
-                <span for="">Your Message</span>
-                <span class="border"></span>
-            </label>
-            <button>Submit 
-                <i class="zmdi zmdi-arrow-right"></i>
-            </button>
-        </form>
+<div class="head-title">
+    <div class="left">
+        <h1>Dashboard</h1>
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li><i class='bx bx-chevron-right' ></i></li>
+            <li>
+                <a class="active" href="#">Home</a>
+            </li>
+        </ul>
     </div>
+   
 </div>
+    <div class="container">
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                
+                                <div id="form-message-warning" class="mb-4"></div> 
+                          <div id="form-message-success" class="mb-4">
+                        Your message was sent, thank you!
+                          </div>
+                                <form method="POST" id="contactForm" name="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send Message" class="btn btn-success">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-5 d-flex align-items-stretch">
+                          
+                     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
