@@ -8,15 +8,14 @@ import org.springframework.web.bind.annotation.*;
 
 import com.securityapicrud.entity.Cars;
 import com.securityapicrud.entity.Gare;
-import com.securityapicrud.entity.Trajet;
 import com.securityapicrud.services.CarsService;
 
 import java.util.List;
 import java.util.Set;
 
 @RestController
-
 @RequestMapping("/api/cars")
+
 public class CarsController {
 
     @Autowired
@@ -29,11 +28,9 @@ public class CarsController {
     }
 
     @GetMapping
-    public List<Cars> getAllCars() {
-        List<Cars> carsList = carsService.getAllCars();
-        return carsList;
+    private List<Cars> getAllCare(){
+    	return carsService.getAllCars();
     }
-   
 
     @GetMapping("/{id}")
     public ResponseEntity<Cars> getOneCars(@PathVariable Long id) {
@@ -50,20 +47,13 @@ public class CarsController {
         Cars updatedCars = carsService.updateCars(cars);
         return ResponseEntity.ok(updatedCars);
     }
-    
- 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteCars(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteCars(@PathVariable Long id) {
         if (carsService.getOneCars(id) == null) {
             return ResponseEntity.notFound().build();
         }
         carsService.deleteCarsById(id);
-        return ResponseEntity.ok().build();
-        
-        
+        return ResponseEntity.noContent().build();
     }
-    
-    
-    
 }

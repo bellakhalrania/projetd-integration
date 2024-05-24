@@ -14,15 +14,19 @@ public class Personne {
     protected String password;
     protected String role;
 
-    public Personne(String email,String Prenom,String nom, String password, String role) {
-        this.nom = nom;
-        this.Prenom = Prenom;
-        this.Email = email;
-        this.password = password;
-        this.role = role;
-    }
+  
 
-    public Personne() {}
+    public Personne(String nom, String prenom, String email, String password, String role) {
+		super();
+		
+		this.nom = nom;
+		Prenom = prenom;
+		Email = email;
+		this.password = password;
+		this.role = role;
+	}
+
+	public Personne() {}
 
     public Long getId() {
         return id;

@@ -1,94 +1,56 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
-<header class="site-header d-flex flex-column justify-content-center align-items-center">
+
+ 
+
+
+<section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row">
 
-            <div class="col-lg-5 col-12">
-                <ul aria-label="breadcrumb">
-                    <ol class="bread">
-                        <li class="breadcrumb-item"><a >Homepage</a></li>
+            <div class=" col-12 mx-auto" style="margin-bottom: 80px; padding: 12px;">
+                <h1 class="text-white text-center">Bienvenue  {{username}} </h1>
 
-                        <li class="breadcrumb-item active" aria-current="page">listes des chauffeurs</li>
-                    </ol>
-                </ul>
+
             </div>
 
         </div>
     </div>
-</header>
-<div class="container">
-<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
-	<div class="col">
-		<div class="card radius-15">
-			<div class="card-body text-center">
-				<div class="p-4 border radius-15">
-					<img src="https://bootdey.com/img/Content/avatar/avatar7.png" width="110" height="110" class="rounded-circle shadow" alt="">
-					<h5 class="mb-0 mt-5">Pauline I. Bird</h5>
-					<p class="mb-3">Webdeveloper</p>
-					<div class="list-inline contacts-social mt-3 mb-3"> <a href="javascript:;" class="list-inline-item bg-facebook text-white border-0"><i class="bx bxl-facebook"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-twitter text-white border-0"><i class="bx bxl-twitter"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-linkedin text-white border-0"><i class="bx bxl-linkedin"></i></a>
-					</div>
-					<div class="star">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
-                    <div class="d-grid"> <a href="#" class="btn btn-outline-primary radius-15">Contact Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card radius-15">
-			<div class="card-body text-center">
-				<div class="p-4 border radius-15">
-					<img src="https://bootdey.com/img/Content/avatar/avatar1.png" width="110" height="110" class="rounded-circle shadow" alt="">
-					<h5 class="mb-0 mt-5">Ralph L. Alva</h5>
-					<p class="mb-3">UI Developer</p>
-					<div class="list-inline contacts-social mt-3 mb-3"> <a href="javascript:;" class="list-inline-item bg-facebook text-white border-0"><i class="bx bxl-facebook"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-twitter text-white border-0"><i class="bx bxl-twitter"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-linkedin text-white border-0"><i class="bx bxl-linkedin"></i></a>
-					</div>
-					<div class="star">&#9733; &#9733; &#9733;</div>
-                    <div class="d-grid"> <a href="#" class="btn btn-outline-primary radius-15">Contact Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card radius-15">
-			<div class="card-body text-center">
-				<div class="p-4 border radius-15">
-					<img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="110" height="110" class="rounded-circle shadow" alt="">
-					<h5 class="mb-0 mt-5">John B. Roman</h5>
-					<p class="mb-3">Graphic Designer</p>
-					<div class="list-inline contacts-social mt-3 mb-3"> <a href="javascript:;" class="list-inline-item bg-facebook text-white border-0"><i class="bx bxl-facebook"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-twitter text-white border-0"><i class="bx bxl-twitter"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-linkedin text-white border-0"><i class="bx bxl-linkedin"></i></a>
-					</div>
-                    <div class="star">&#9733; &#9733; &#9733;  &#9733;</div>
-					<div class="d-grid"> <a href="#" class="btn btn-outline-primary radius-15">Contact Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col">
-		<div class="card radius-15">
-			<div class="card-body text-center">
-				<div class="p-4 border radius-15">
-					<img src="https://bootdey.com/img/Content/avatar/avatar2.png" width="110" height="110" class="rounded-circle shadow" alt="">
-					<h5 class="mb-0 mt-5">David O. Buckley</h5>
-					<p class="mb-3">Android Developer</p>
-					<div class="list-inline contacts-social mt-3 mb-3"> <a href="javascript:;" class="list-inline-item bg-facebook text-white border-0"><i class="bx bxl-facebook"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-twitter text-white border-0"><i class="bx bxl-twitter"></i></a>
-						<a href="javascript:;" class="list-inline-item bg-linkedin text-white border-0"><i class="bx bxl-linkedin"></i></a>
-					</div>
-                    <div class="star"> &#9733; &#9733;</div>
-					<div class="d-grid"> <a href="#" class="btn btn-outline-primary radius-15">Contact Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+</section>
+
+
+<section class="featured-section">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                    <div class="container">
+                        <div class="details">
+                            <h4>{{username}}<i class="fa fa-sheild"></i></h4>
+                
+                            <div class="info-container">
+                        <div class="info">
+                            <span class="info-label">Nom :</span>
+                            <span class="info-value">{{name}}</span>
+                        </div>
+                        <div class="info">
+                            <span class="info-label">email :</span>
+                            <span class="info-value">{{email}}</span>
+                        </div>
+                        <div class="info">
+                            <span class="info-label">nom de compte :</span>
+                            <span class="info-value">{{username}}</span>
+                        </div>
+                        <div class="info">
+                            <span class="info-label">Adresse :</span>
+                            <span class="info-value">bizerte</span>
+                        </div>
+                      </div>
+                </div>
+            </div>
+           
+
+        
+    </div>
 </div>
 </div>
+</div></section>
