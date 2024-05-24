@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { LayoutsModule } from './layouts/layouts.module';
 import { ListGareModule } from './views/admin/list-gare/list-gare.module';
 import { DashboardModule } from './views/admin/dashboard/dashboard.module';
+import { DashboardchauffeurModule } from './views/chauffeur/dashboard/dashboard/dashboard.module';
+import { AjouterDemandeModule } from './views/chauffeur/ajouter-demande/ajouter-demande.module';
+
 import { AjouterGareModule } from './views/admin/ajouter-gare/ajouter-gare.module';
 import { AjouterTrajetModule } from './views/admin/ajouter-trajet/ajouter-trajet.module';
 import { FormsModule } from '@angular/forms';
@@ -84,8 +87,8 @@ import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/li
     AddchauffeurModule,ListechauffeurModule,
     MatCheckboxModule,
     MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
+    MatStepperModule,AjouterDemandeModule,
+    MatDatepickerModule,DashboardchauffeurModule,
     MatDialogModule,
     MatDividerModule,
     MatExpansionModule,

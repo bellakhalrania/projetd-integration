@@ -14,4 +14,4 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardRoutingModule
   ]
 })
-export class DashboardModule { }
+export class DashboardchauffeurModule { }
