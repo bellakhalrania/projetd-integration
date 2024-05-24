@@ -379,3 +379,26 @@ background:#eee;
     width: 100%;
     height: 100%;
 }
+
+.info-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  max-width: 300px;
+  width: 100%;
+}
+.info {
+  margin-bottom: 15px;
+}
+.info:last-child {
+  margin-bottom: 0;
+}
+.info-label {
+  font-weight: bold;
+  color: #555;
+  margin-right: 5px;
+}
+.info-value {
+  color: #333;
+}

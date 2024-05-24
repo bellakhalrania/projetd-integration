@@ -91,4 +91,17 @@ export class DataService {
   updatebus(id:string,newdata:any){
     return this.http.put('http://localhost:8085/api/cars/'+id,newdata)
   }
+  /**********************************chauffeur************************************* */
+  getAllchauffeur(){
+    return this.http.get('http://localhost:8085/api/chauffeurs')
+  }
+  addchauffeur(chauffeur:any){
+    return this.http.post('http://localhost:8085/api/chauffeurs',chauffeur);
+  }
+  deletechauffeur(id:any){
+    return this.http.delete('http://localhost:8085/api/chauffeurs/'+id)
+  }
+  updatechauffeur(id:string,newdata:any){
+    return this.http.put('http://localhost:8085/api/chauffeurs/'+id,newdata)
+  }
 }
