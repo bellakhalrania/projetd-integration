@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutsModule } from './layouts/layouts.module';
@@ -65,7 +65,7 @@ import { AddbusModule } from './views/admin/buses/addbus/addbus.module';
 import { ListebusModule } from './views/admin/buses/listebus/listebus.module';
 import { AddchauffeurModule } from './views/admin/chauffeurs/addchauffeur/addchauffeur.module';
 import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/listechauffeur.module';
-
+//import { AjouterReclamationComponent } from './views/chauffeur/ajouter-reclamation/ajouter-reclamation/ajouter-reclamation/ajouter-reclamation.component';
 
 
 
@@ -73,12 +73,11 @@ import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/li
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent,SignupComponent,
+    AppComponent,LoginComponent,SignupComponent, 
    
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,
-    FormsModule,CommonModule,
+    BrowserModule,BrowserAnimationsModule,ReactiveFormsModule,CommonModule,
     AppRoutingModule,LayoutsModule,ListGareModule,
     DashboardModule,AjouterGareModule,HttpClientModule,
     UsersModule,StartPassagerModule,ContactFromModule,

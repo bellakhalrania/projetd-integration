@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import {FormsModule} from '@angular/forms';
 import { AjouterDemandeRoutingModule } from './ajouter-demande-routing.module';
 import { AjouterDemandeComponent } from './ajouter-demande/ajouter-demande.component';
-
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { AjouterDemandeComponent } from './ajouter-demande/ajouter-demande.compo
   ],
   imports: [
     CommonModule,
-    AjouterDemandeRoutingModule
+    AjouterDemandeRoutingModule,
+    FormsModule 
   ]
 })
 export class AjouterDemandeModule { }
