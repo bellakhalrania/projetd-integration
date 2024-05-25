@@ -56,46 +56,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let item of dataArray;index as i">
+                    <td>{{item.id}}</td>
                     <td>
-                        <img src="img/people.png">
-                        <p>John Doe</p>
+                        
+                        <p>{{item.typeconge}}</p>
                     </td>
-                    <td>01-10-2021</td>
-                    <td><span class="status completed">Completed</span></td>
-                </tr>
-                <tr>
+                    <td>{{item.startDate}}</td>
+                    <td>{{item.endDate}}</td>
                     <td>
-                        <img src="img/people.png">
-                        <p>John Doe</p>
+                        
+                        <p>{{item.reason}}</p>
                     </td>
-                    <td>01-10-2021</td>
-                    <td><span class="status pending">Pending</span></td>
+                    <td><span class="status" [ngClass]="getStatusClass(item.status)">{{item.status}}</span></td>
                 </tr>
-                <tr>
-                    <td>
-                        <img src="img/people.png">
-                        <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span class="status process">Process</span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/people.png">
-                        <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span class="status pending">Pending</span></td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="img/people.png">
-                        <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span class="status completed">Completed</span></td>
-                </tr>
+                
             </tbody>
         </table>
 

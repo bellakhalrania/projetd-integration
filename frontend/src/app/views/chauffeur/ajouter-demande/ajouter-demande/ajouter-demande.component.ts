@@ -19,7 +19,7 @@ export class AjouterDemandeComponent {
     let data = f.value;
     console.log(data);
     this.ds.addDemandeConge(data).subscribe(data => console.log(data));
-    this.route.navigate(['chauffeur']);
+    this.route.navigate(['/chauffeur']);
   }
 
   ngOnInit(): void {

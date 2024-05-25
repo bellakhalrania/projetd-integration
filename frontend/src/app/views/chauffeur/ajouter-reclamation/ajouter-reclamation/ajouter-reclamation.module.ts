@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AjouterReclamationRoutingModule } from './ajouter-reclamation-routing.module';
 import { AjouterReclamationComponent } from './ajouter-reclamation/ajouter-reclamation.component';
@@ -11,7 +14,7 @@ import { AjouterReclamationComponent } from './ajouter-reclamation/ajouter-recla
   ],
   imports: [
     CommonModule,
-    AjouterReclamationRoutingModule
+    AjouterReclamationRoutingModule,ReactiveFormsModule,FormsModule
   ]
 })
 export class AjouterReclamationModule { }
