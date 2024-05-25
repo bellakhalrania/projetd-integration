@@ -6,6 +6,7 @@ import { LoginComponent } from './views/login/login.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { PassagerLayoutComponent } from './layouts/passager-layout/passager-layout.component';
 import { ChauffeurLayoutComponent } from './layouts/chauffeur-layout/chauffeur-layout.component';
+import { DestinationComponent } from './views/front/destination/destination.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,7 @@ const routes: Routes = [
   ]},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
+  {path:'destination',component:DestinationComponent},
   {path:'chauffeur',component:ChauffeurLayoutComponent,children:[
     {path:'',loadChildren:()=>import('./views/chauffeur/dashboard/dashboard.module').then(m=>m.DashboardModule)},
 

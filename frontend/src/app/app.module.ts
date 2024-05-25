@@ -62,6 +62,7 @@ import { AddbusModule } from './views/admin/buses/addbus/addbus.module';
 import { ListebusModule } from './views/admin/buses/listebus/listebus.module';
 import { AddchauffeurModule } from './views/admin/chauffeurs/addchauffeur/addchauffeur.module';
 import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/listechauffeur.module';
+import { DestinationComponent } from './views/front/destination/destination.component';
 
 
 
@@ -70,7 +71,7 @@ import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/li
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent,SignupComponent,
+    AppComponent,LoginComponent,SignupComponent, DestinationComponent,
    
   ],
   imports: [

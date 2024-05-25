@@ -52,7 +52,16 @@ export class UsersComponent implements OnInit {
         }
       );
     } else {
-      this.messageEr = 'Veuillez saisir un nom dutilisateur.';
+      this.ds.getAllUsers().subscribe(
+        (data) => {
+          this.dataArray = data;
+          this.messageSu = 'Tous les utilisateurs ont été trouvés';
+        },
+        (error) => {
+          console.error(error);
+          this.messageEr = 'Une erreur sest produite lors de la récupération de tous les utilisateurs.';
+        }
+      );
     }
   }
 
