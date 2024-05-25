@@ -104,4 +104,18 @@ export class DataService {
   updatechauffeur(id:string,newdata:any){
     return this.http.put('http://localhost:8085/api/chauffeurs/'+id,newdata)
   }
+    /**********************************demandeConge************************************* */
+    addDemandeConge(demandeConge: any) {
+      return this.http.post('http://localhost:8085/api/conge', demandeConge);
+      
+    }
+    getAllDemandeConge(){
+      return this.http.get('http://localhost:8085/api/conge')
+    }
+    /**********************************reclamation************************************* */
+    addreclamation(reclamation: any) {
+      return this.http.post('http://localhost:8085/api/chauffeur/Reclamation', reclamation);
+      
+    }
+
 }
