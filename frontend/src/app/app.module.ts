@@ -8,7 +8,7 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { ListGareModule } from './views/admin/list-gare/list-gare.module';
 import { DashboardModule } from './views/admin/dashboard/dashboard.module';
 import { AjouterGareModule } from './views/admin/ajouter-gare/ajouter-gare.module';
-import { FormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './views/login/login.component';
@@ -33,7 +33,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatGridListModule } from '@angular/material/grid-list';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
@@ -54,16 +54,20 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 import { NavbarComponent } from './views/front/navbar/navbar.component';
-
+import { OffreAdminService } from './views/admin/offre-admin/offre-admin/offre-admin.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    AppComponent,LoginComponent,SignupComponent
+    AppComponent,LoginComponent,SignupComponent, 
    
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,BrowserAnimationsModule,
     FormsModule,CommonModule,
     AppRoutingModule,LayoutsModule,ListGareModule,
@@ -72,6 +76,7 @@ import { NavbarComponent } from './views/front/navbar/navbar.component';
     ListesGareModule,ChauffreProfileModule,
     MatCheckboxModule,
     MatChipsModule,
+    ReactiveFormsModule,
     MatStepperModule,
     MatDatepickerModule,
     MatDialogModule,
@@ -105,9 +110,14 @@ import { NavbarComponent } from './views/front/navbar/navbar.component';
     MatButtonModule,
     MatButtonToggleModule,
     MatCardModule,
+    MatGridListModule,
+    NgbModule,
+    FormsModule,
+    
+    
   ],
   providers: [
-   
+    OffreAdminService
   ],
   bootstrap: [AppComponent]
 })

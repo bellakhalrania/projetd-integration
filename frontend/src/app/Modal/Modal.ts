@@ -36,19 +36,10 @@ export class User {
     dateCreated: any,
     status: any
   }
-  export class OffreOrder {
-    id: number=0;
-    offre: Offre;
-    quantity: number = 1;
-    constructor(offre: Offre, quantity: number) {
-      this.offre = offre;
-      this.quantity = quantity = 1;
-    }
-  }
-  export class OffreOrders {
-    offreOrders: OffreOrder[] = [];
-  }
-  export interface Offre {
+  
+  
+  
+  export interface Offre1 {
     id: number,
     description: string,
     name: string,
@@ -65,6 +56,7 @@ export class User {
     value: string="";
     price: number=0;
   }
+
   export class UpdateO {
     id: number=0;
     name: string="";

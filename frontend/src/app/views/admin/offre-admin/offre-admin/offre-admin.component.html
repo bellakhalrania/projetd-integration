@@ -1,57 +1,156 @@
-<h1 class="title">Liste des offres</h1>
-<ul class="breadcrumbs">
-    <li><a href="#">Listes des offres</a></li>
-    <li class="divider">/</li>
-    <li><a href="#" class="active">Offres</a></li>
-</ul>
-<div  style="width: 1200px;">
-<div class="card" style="padding: 40px;">
-    <div class="content-data">
+<div class="container">
 
-<div class="head">
-    <h3></h3>
-    <div class="menu">
-        <button type="button" class="btn btn-info" routerLink="/admin/ajouter-gare" > Add offre </button>
-    </div>
-</div>
-
-           
-    
-    
-
-
-<table class="table">
-    <thead>
-        <tr>
-          <th>#</th>
-          <th></th>
-          <th>Nom de gare</th>
-          <th>Lieu</th>
-          <th>Adresse</th>
-          <th>option</th>
-          <th></th>
-        </tr>
+    <div class="border">
+        <button class="btn btn-md btn-outline-primary" (click)="open(content)">
+          <i class="fa fa-user"></i>New Offers</button>
+      </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+      <tr>
+      
+        <th>NomOffre</th>
+        <th>descriptionOffre</th>
+        <th>PrixOffre</th>
+        <th>DateDebut</th>
+        <th>DateFin</th>
+        <th>Actions</th>
+      </tr>
       </thead>
       <tbody>
-        
-        <tr >
-          <td>1</td>
-          <td class="icon">
-            <img src="assets/admin/images/gare (1).png" class="icon-img" alt="image" />
-          </td>
-          <td></td>
-          <td>
-            
-          </td>
-          <td></td>
-         
-         <td> <button type="button" style="border: none;" data-toggle="modal" data-target="#exampleModal"><img src="assets/admin/images/edite.png" class="icon-img"> </button> 
-            <button type="button" style="border: none;" ><img src="assets/admin/images/delete.png" class="icon-img" ></button></td>
-        </tr>
-        
-      </tbody>
-  </table>
-</div>
-</div>
-</div>
+      <tr *ngFor="let offre of offres">
+      
+        <td><span>{{offre.NomOffre}}</span></td>
+        <td><span>{{offre.descriptionOffre}}</span></td>
+        <td><span>{{offre.PrixOffre}}</span></td>
+        <td><span>{{offre.DateDebut}}</span></td>
+        <td><span>{{offre.DateFin}}</span></td>
 
+        <td>
+            <button class="btn btn-sm btn-info" (click)="openDetails(contentDetails, offre)">
+              <i class="fa fa-search"></i>Details</button>
+            <button class="btn btn-sm btn-warning">
+              <i class="fa fa-edit"></i>Edit</button>
+            <button class="btn btn-sm btn-danger">
+              <i class="fa fa-remove"></i>Delete</button>
+          </td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">New Friend</h4>
+      <button type="button" class="close" aria-label="Close" (click)="f.resetForm();modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+            
+        <div class="form-group">
+            <label for="NomOffre">Offre Name</label>
+            <div class="input-group">
+              <input id="NomOffre" name="NomOffre" class="form-control"  ngModel >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="descriptionOffre">Offre Description</label>
+            <div class="input-group">
+              <input id="descriptionOffre" name="descriptionOffre" class="form-control" ngModel >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="PrixOffre">Offre Price</label>
+            <div class="input-group">
+              <input id="PrixOffre" name="PrixOffre" class="form-control" ngModel >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="DateDebut">DateDebut</label>
+            <div class="input-group">
+              <input id="DateDebut" name="DateDebut" class="form-control" ngModel >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="DateFin">DateFin</label>
+            <div class="input-group">
+              <input id="DateFin" name="DateFin" class="form-control" ngModel >
+            </div>
+          </div>
+
+          
+
+          <div class="border text-center">
+            <button data-dismiss="modal" class="btn btn-info">Submit</button>
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">close</button>
+    </div>
+  </ng-template>
+
+
+
+
+
+
+  
+  <ng-template #contentDetails let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Offre Details</h4>
+      <button type="button" class="close" aria-label="Close" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            
+        <div class="form-group">
+            <label for="NomOffre">Offre Name</label>
+            <div class="input-group">
+              <input id="noffre" name="NomOffre" class="form-control"  readonly >
+            </div>
+          </div>
+          <div class="form-group">
+            <label >Offre Description</label>
+            <div class="input-group">
+              <input id="doffre" class="form-control" readonly >
+            </div>
+          </div>
+          <div class="form-group">
+            <label >Offre Price</label>
+            <div class="input-group">
+              <input id="poffre" class="form-control" readonly >
+            </div>
+          </div>
+          <div class="form-group">
+            <label >DateDebut</label>
+            <div class="input-group">
+              <input id="dd" class="form-control" readonly >
+            </div>
+          </div>
+          <div class="form-group">
+            <label >DateFin</label>
+            <div class="input-group">
+              <input id="df"  class="form-control" readonly >
+            </div>
+          </div>
+
+          
+
+          <div class="border text-center">
+            <button data-dismiss="modal" class="btn btn-info">Submit</button>
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">close</button>
+    </div>
+  </ng-template>
