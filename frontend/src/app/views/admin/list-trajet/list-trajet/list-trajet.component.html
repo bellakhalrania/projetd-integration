@@ -1,0 +1,106 @@
+
+<h1 class="title">Liste des trajets</h1>
+<ul class="breadcrumbs">
+    <li><a href="#">Listes des trajets</a></li>
+    <li class="divider">/</li>
+    <li><a href="#" class="active">Trajet</a></li>
+</ul>
+<div  style="width: 1200px;">
+<div class="card" style="padding: 40px;">
+    <div class="content-data">
+
+<div class="head">
+    <h3></h3>
+    <div class="menu">
+        <button type="button" class="btn btn-info" routerLink="/admin/ajouter-trajet" > Add Trajet </button>
+        
+        
+    </div>
+</div>
+
+           
+    
+    
+
+
+<table class="table">
+    <thead>
+        <tr>
+          <th>#</th>
+          <th></th>
+          <th>Station de Depart</th>
+          <th>Station d'arriver</th>
+          <th>Date depart</th>
+          <th>Date arriver</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let item of dataArray;index as i">
+          <td>{{i+1}}</td>
+          <td class="icon">
+            <img src="assets/admin/images/gare (1).png" class="icon-img" alt="image" />
+          </td>
+          <td>{{item.stationDepart}}</td>
+          <td>
+            {{item.stationArrive}}
+          </td>
+          <td>{{item.depart}}</td>
+          <td>{{item.arrive}}</td>
+         <td> <button type="button" style="border: none;" data-toggle="modal" data-target="#exampleModal" (click)="getdata(item.stationDepart,item.stationArrive,item.depart,item.arrive,item.id)"><img src="assets/admin/images/edite.png" class="icon-img"> </button> 
+            <button type="button" style="border: none;" (click)="deleteTrajet(item.id,i)"><img src="assets/admin/images/delete.png" class="icon-img" ></button></td>
+        </tr>
+        
+      </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+
+
+
+<!-- Structure du modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- En-tête du modal -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modifier</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Contenu du modal -->
+      <div class="modal-body">
+        <form #f="ngForm" (ngSubmit)="update(f)" >
+          <div class="form-group">
+            <label for="input" class="col-form-label">Station de Depart</label>
+            
+              <input type="text" class="form-control" [(ngModel)]="dataTrajet.stationDepart" name="stationDepart" #stationDepart="ngModel"  ngModel required>
+            
+          </div>
+          <div class="form-group">
+              <label for="inputEmail3" class="col-form-label">Station d'arriver</label>
+                <input type="text" class="form-control"  [(ngModel)]="dataTrajet.stationArrive" name="stationArrive" #stationArrive="ngModel"  ngModel required>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-form-label">Date depart</label>
+                <input type="datetime-local" class="form-control" [(ngModel)]="dataTrajet.depart"  #depart="ngModel"  name="depart"  ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-form-label">Date Arriver</label>
+                  <input type="datetime-local" class="form-control" [(ngModel)]="dataTrajet.arrive"  #arrive="ngModel"  name="arrive"  ngModel required>
+              </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            <button type="submit" class="btn btn-primary">Modifier</button>
+          </div>           
+        </form>
+      </div>
+      <!-- Pied du modal -->
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+
+<h1 class="title">Ajouter  un  nouveau bus</h1>
+<ul class="breadcrumbs">
+    <li><a >Ajouter bus</a></li>
+    <li class="divider">/</li>
+    <li><a routerLink="/admin/listebus" class="active">bus</a></li>
+</ul>
+<div class="container" >
+<div class="card" style="padding: 40px;">
+  <div class="content-data" style="display: flex; align-items: flex-start;">
+    <form #f="ngForm" (ngSubmit)="add(f)" style="flex: 1; margin-right: 20px;">
+            <div class="form-group row">
+              <label for="input" class="col-sm-2 col-form-label">Nom </label>
+              
+                <input type="text" class="form-control" name="name" #name="ngModel" ngModel required>
+              
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Matricule</label>
+                  <input type="text" class="form-control" name="matricule" #matricule="ngModel" ngModel required>
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">modele</label>
+              
+                  <input type="text" class="form-control"  name="modele" #modele="ngModel" ngModel required>
+             
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">line</label>
+              
+                  <input type="text" class="form-control"  name="line" #line="ngModel" ngModel required>
+             
+              </div>
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">etat</label>
+              
+                  <input type="text" class="form-control"  name="etat" #etat="ngModel" ngModel required>
+             
+              </div>
+            <div class="form-group row">
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+            </div>           
+          </form>
+          <img src="../assets/admin/images/ajouter.png" style="    width: 40%;
+          height: 462px;
+          padding-top: 50px; ">
+
+
+</div>
+</div>
+
+</div>

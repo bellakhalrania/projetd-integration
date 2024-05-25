@@ -8,11 +8,15 @@
         <li><a routerLink="/admin/dashboard" class="active"><i class='bx bxs-dashboard icon' ></i> Tableau de bord</a></li>
         
         <li>
-            <a routerLink="/admin/list-gare"><i class="bi bi-building-fill icon" ></i> Gares <i class='bx bx-chevron-right icon-right' ></i></a>
+            <a routerLink="/admin/ajouterDemande"><i class="bi bi-building-fill icon" ></i> Gares <i class='bx bx-chevron-right icon-right' ></i></a>
             <ul class="side-dropdown">
                 <li><a routerLink="/admin/ajouter-gare">Ajouter une gare</a></li>
                 
             </ul>
+        </li>
+        <li>
+            <a routerLink="/admin/listebus"><i class="bi bi-building-fill icon" ></i> Buses <i class='bx bx-chevron-right icon-right' ></i></a>
+            
         </li>
         <li>
             <a routerLink="/admin/offre"><i class="bi bi-boxes icon"></i> Offres <i class='bx bx-chevron-right icon-right' ></i></a>
@@ -23,9 +27,9 @@
         </li>
         <li><a ><i class='bi bi-archive icon' ></i> Demandes</a></li>
         <li>
-            <a><i class='bi bi-people-fill icon' ></i> Chauffeures<i class='bx bx-chevron-right icon-right' ></i></a>
+            <a routerLink="/admin/listechauffeur"><i class='bi bi-people-fill icon' ></i> Chauffeures<i class='bx bx-chevron-right icon-right' ></i></a>
             <ul class="side-dropdown">
-                <li><a>ajouter Chauffeures</a></li>
+                <li><a routerLink="/admin/addchauffeur">ajouter Chauffeures</a></li>
                 <li><a >demande de congé</a></li>
             </ul>
         </li>
@@ -33,17 +37,19 @@
             <a routerLink="/admin/users"><i class='bi bi-people-fill icon' ></i>Users<i class='bx bx-chevron-right icon-right' ></i></a>
             
         </li>
-        <li><a><i class='bi bi-calendar4 icon' ></i> Calendrier</a></li>
+        
         <li>
-            <a ><i class='bi bi-people-fill icon' ></i>Compte passager<i class='bx bx-chevron-right icon-right' ></i></a>
+            <a routerLink="/admin/listepassager"><i class='bi bi-people-fill icon' ></i>Compte passager<i class='bx bx-chevron-right icon-right' ></i></a>
             
         </li>
         <li>
-            <a ><i class='bi bi-bus-front icon' ></i>Trajets<i class='bx bx-chevron-right icon-right' ></i></a>
+            <a routerLink="/admin/list-trajet"><i class="bi bi-building-fill icon" ></i> Trajets <i class='bx bx-chevron-right icon-right' ></i></a>
             <ul class="side-dropdown">
-                <li><a >ajouter trajet</a></li>
+                <li><a routerLink="/admin/ajouter-trajet">ajouter trajete</a></li>
+               
                 </ul>
         </li>
+        <li><a routerLink="/admin/profile"><i class='bi bi-calendar4 icon' ></i> Profile</a></li>
     </ul>
     <div class="ads">
         <div class="wrapper">

@@ -1,0 +1,58 @@
+<h1 class="title">Liste des chauffeurs</h1>
+<ul class="breadcrumbs">
+    <li><a href="#">Liste des chauffeurs</a></li>
+    <li class="divider">/</li>
+    <li><a href="#" class="active">chauffeur</a></li>
+</ul>
+<div style="width: 1200px;">
+    <div class="card" style="padding: 40px;">
+        <div class="content-data">
+            <div class="head">
+                <h3></h3>
+                <div class="menu">
+                    <button type="button" class="btn btn-info" routerLink="/admin/addchauffeur"> Ajouter chauffeur </button>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th></th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Salaire</th>
+                        <th>Note</th>
+                       
+                        <th>Option</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of dataArray; index as i">
+                        <td>{{i+1}}</td>
+                        <td class="icon">
+                            <img src="assets/admin/images/chauffeur.png" class="icon-img" alt="image" />
+                        </td>
+                        <td>{{item.nom}}</td>
+                        <td>{{item.prenom}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.salaire}}</td>
+                        <td>{{item.note}}</td>
+                      
+                        <td>
+                            <button class="btn btn-danger" (click)="deletepassager(item.id, i)" style="margin-right: 12px;">
+                                <i class="fas fa-trash-alt"></i> 
+                            </button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" 
+                               >
+                                <i class="fas fa-eye"></i> 
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

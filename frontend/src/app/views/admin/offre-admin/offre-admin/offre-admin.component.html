@@ -17,6 +17,7 @@
       </tr>
       </thead>
       <tbody>
+<<<<<<< HEAD
       <tr *ngFor="let offre of offres">
       
         <td><span>{{offre.NomOffre}}</span></td>
@@ -24,6 +25,33 @@
         <td><span>{{offre.PrixOffre}}</span></td>
         <td><span>{{offre.DateDebut}}</span></td>
         <td><span>{{offre.DateFin}}</span></td>
+=======
+        
+        <tr >
+          <td>1</td>
+          <td class="icon">
+            <img src="assets/admin/images/gare (1).png" class="icon-img" alt="image" />
+          </td>
+          <td></td>
+          <td>
+            
+          </td>
+          <td></td>
+         
+          <td> <button class="btn btn-danger" style="margin-right: 12px;">
+            <i class="fas fa-trash-alt"></i> 
+          </button>
+        
+          <button class="btn btn-primary"  data-toggle="modal" data-target="#exampleModal" >
+            <i class="fas fa-eye"></i> 
+          </button></td>
+        
+      </tbody>
+  </table>
+</div>
+</div>
+</div>
+>>>>>>> de59388368497a142bae1294a48cb4f00d339d00
 
         <td>
             <button class="btn btn-sm btn-info" (click)="openDetails(contentDetails, offre)">

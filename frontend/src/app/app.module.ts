@@ -7,8 +7,16 @@ import { AppComponent } from './app.component';
 import { LayoutsModule } from './layouts/layouts.module';
 import { ListGareModule } from './views/admin/list-gare/list-gare.module';
 import { DashboardModule } from './views/admin/dashboard/dashboard.module';
-import { AjouterGareModule } from './views/admin/ajouter-gare/ajouter-gare.module';
+import { DashboardchauffeurModule } from './views/chauffeur/dashboard/dashboard/dashboard.module';
+import { AjouterDemandeModule } from './views/chauffeur/ajouter-demande/ajouter-demande.module';
 
+import { AjouterGareModule } from './views/admin/ajouter-gare/ajouter-gare.module';
+<<<<<<< HEAD
+
+=======
+import { AjouterTrajetModule } from './views/admin/ajouter-trajet/ajouter-trajet.module';
+import { FormsModule } from '@angular/forms';
+>>>>>>> de59388368497a142bae1294a48cb4f00d339d00
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './views/login/login.component';
@@ -17,6 +25,7 @@ import { UsersModule } from './views/admin/users/users.module';
 import { StartPassagerModule } from './views/passager/start-passager/start-passager.module';
 import { ContactFromModule } from './views/passager/contact-from/contact-from.module';
 import { ListesGareModule } from './views/passager/listes-gare/listes-gare.module';
+import { ListesTrajetModule } from './views/passager/listes-trajet/listes-trajet.module';
 import { ChauffreProfileModule } from './views/passager/chauffre-profile/chauffre-profile.module';/*
 import { ServicesComponent } from './views/front/services/services.component';*/
 
@@ -54,6 +63,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+<<<<<<< HEAD
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NavbarComponent } from './views/front/navbar/navbar.component';
 import { OffreAdminService } from './views/admin/offre-admin/offre-admin/offre-admin.service';
@@ -64,6 +74,23 @@ import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,LoginComponent,SignupComponent, 
+=======
+import { AddpassagerModule } from './views/admin/passagers/addpassager/addpassager.module';
+import { ListepassagerModule } from './views/admin/passagers/listepassager/listepassager.module';
+import { AddbusModule } from './views/admin/buses/addbus/addbus.module';
+import { ListebusModule } from './views/admin/buses/listebus/listebus.module';
+import { AddchauffeurModule } from './views/admin/chauffeurs/addchauffeur/addchauffeur.module';
+import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/listechauffeur.module';
+
+
+
+
+
+
+@NgModule({
+  declarations: [
+    AppComponent,LoginComponent,SignupComponent,
+>>>>>>> de59388368497a142bae1294a48cb4f00d339d00
    
   ],
   imports: [
@@ -73,12 +100,19 @@ import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,LayoutsModule,ListGareModule,
     DashboardModule,AjouterGareModule,HttpClientModule,
     UsersModule,StartPassagerModule,ContactFromModule,
-    ListesGareModule,ChauffreProfileModule,
+    ListesGareModule,ChauffreProfileModule,AjouterTrajetModule,ListesTrajetModule,
+    AddpassagerModule,ListepassagerModule,AddbusModule,ListebusModule,
+    AddchauffeurModule,ListechauffeurModule,
     MatCheckboxModule,
     MatChipsModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     MatStepperModule,
     MatDatepickerModule,
+=======
+    MatStepperModule,AjouterDemandeModule,
+    MatDatepickerModule,DashboardchauffeurModule,
+>>>>>>> de59388368497a142bae1294a48cb4f00d339d00
     MatDialogModule,
     MatDividerModule,
     MatExpansionModule,

@@ -1,0 +1,66 @@
+
+<h1 class="title">Ajouter  un  nouveau bus</h1>
+<ul class="breadcrumbs">
+    <li><a >Ajouter bus</a></li>
+    <li class="divider">/</li>
+    <li><a routerLink="/admin/listebus" class="active">bus</a></li>
+</ul>
+<div class="container" >
+<div class="card" style="padding: 40px;">
+  <div class="content-data" style="display: flex; align-items: flex-start;">
+    <form #f="ngForm" (ngSubmit)="add(f)" style="flex: 1; margin-right: 20px;">
+        <div class="form-group">
+            <label for="email" class="col-form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" #email="ngModel" ngModel required>
+            <div *ngIf="email.invalid && email.touched" class="text-danger">L'email est requis et doit être valide.</div>
+        </div>
+        <div class="form-group">
+            <label for="prenom" class="col-form-label">Prénom</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" #prenom="ngModel" ngModel required>
+            <div *ngIf="prenom.invalid && prenom.touched" class="text-danger">Le prénom est requis.</div>
+        </div>
+        <div class="form-group">
+            <label for="nom" class="col-form-label">Nom</label>
+            <input type="text" class="form-control" id="nom" name="nom" #nom="ngModel" ngModel required>
+            <div *ngIf="nom.invalid && nom.touched" class="text-danger">Le nom est requis.</div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="password" name="password" #password="ngModel" ngModel required>
+            <div *ngIf="password.invalid && password.touched" class="text-danger">Le mot de passe est requis.</div>
+        </div>
+        <div class="form-group">
+            <label for="role" class="col-form-label">Rôle</label>
+            <input type="text" class="form-control" id="role" name="role" #role="ngModel" ngModel required>
+            <div *ngIf="role.invalid && role.touched" class="text-danger">Le rôle est requis.</div>
+        </div>
+        <div class="form-group">
+            <label for="note" class="col-form-label">Note</label>
+            <input type="text" class="form-control" id="note" name="note" #note="ngModel" ngModel required>
+            <div *ngIf="note.invalid && note.touched" class="text-danger">La note est requise.</div>
+        </div>
+        <div class="form-group">
+            <label for="salaire" class="col-form-label">Salaire</label>
+            <input type="number" class="form-control" id="salaire" name="salaire" #salaire="ngModel" ngModel required>
+            <div *ngIf="salaire.invalid && salaire.touched" class="text-danger">Le salaire est requis.</div>
+        </div>
+        <div class="form-group">
+            <label for="cars" class="col-form-label">Voitures</label>
+            <select multiple class="form-control" id="cars" name="cars" #cars="ngModel" ngModel required>
+                <option *ngFor="let car of availableCars" [ngValue]="car">{{ car.name }}</option>
+            </select>
+            <div *ngIf="cars.invalid && cars.touched" class="text-danger">Veuillez sélectionner au moins une voiture.</div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Ajouter</button>
+        </div>     
+          </form>
+          <img src="../assets/admin/images/ajouter.png" style="    width: 40%;
+          height: 462px;
+          padding-top: 50px; ">
+
+
+</div>
+</div>
+
+</div>

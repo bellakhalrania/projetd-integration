@@ -52,6 +52,7 @@ export class DataService {
   getuserByUsername(username:any){
     return this.http.get('http://localhost:8085/api/auth/getUsername/'+username)
   }
+  /*****************************gare********************************* */
   getAllGare(){
     return this.http.get('http://localhost:8085/api/AllGare')
   }
@@ -63,5 +64,44 @@ export class DataService {
   }
   updategare(id:string,newdata:any){
     return this.http.put('http://localhost:8085/api/gare/'+id,newdata)
+  }
+  /****************************trajet**********************/
+  getAllTrajets(){
+    return this.http.get('http://localhost:8085/api/AllTrajet')
+  }
+  addTrajet(trajet:any){
+    return this.http.post('http://localhost:8085/api/trajet',trajet);
+  }
+  deleteTrajet(id:any){
+    return this.http.delete('http://localhost:8085/api/trajet/'+id)
+  }
+  updateTrajet(id:string,newdata:any){
+    return this.http.put('http://localhost:8085/api/trajet/'+id,newdata)
+  }
+  /**********************************bus************************************* */
+  getAllbus(){
+    return this.http.get('http://localhost:8085/api/cars')
+  }
+  addbus(bus:any){
+    return this.http.post('http://localhost:8085/api/cars',bus);
+  }
+  deletebus(id:any){
+    return this.http.delete('http://localhost:8085/api/cars/'+id)
+  }
+  updatebus(id:string,newdata:any){
+    return this.http.put('http://localhost:8085/api/cars/'+id,newdata)
+  }
+  /**********************************chauffeur************************************* */
+  getAllchauffeur(){
+    return this.http.get('http://localhost:8085/api/chauffeurs')
+  }
+  addchauffeur(chauffeur:any){
+    return this.http.post('http://localhost:8085/api/chauffeurs',chauffeur);
+  }
+  deletechauffeur(id:any){
+    return this.http.delete('http://localhost:8085/api/chauffeurs/'+id)
+  }
+  updatechauffeur(id:string,newdata:any){
+    return this.http.put('http://localhost:8085/api/chauffeurs/'+id,newdata)
   }
 }
