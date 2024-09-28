@@ -79,7 +79,10 @@ import { AddbusModule } from './views/admin/buses/addbus/addbus.module';
 import { ListebusModule } from './views/admin/buses/listebus/listebus.module';
 import { AddchauffeurModule } from './views/admin/chauffeurs/addchauffeur/addchauffeur.module';
 import { ListechauffeurModule } from './views/admin/chauffeurs/listechauffeur/listechauffeur.module';
-//import { AjouterReclamationComponent } from './views/chauffeur/ajouter-reclamation/ajouter-reclamation/ajouter-reclamation/ajouter-reclamation.component';
+
+import { DestinationComponent } from './views/front/destination/destination.component';
+
+
 
 
 

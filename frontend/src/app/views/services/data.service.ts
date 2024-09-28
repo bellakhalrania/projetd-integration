@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -91,6 +92,7 @@ export class DataService {
   updatebus(id:string,newdata:any){
     return this.http.put('http://localhost:8085/api/cars/'+id,newdata)
   }
+
   /**********************************chauffeur************************************* */
   getAllchauffeur(){
     return this.http.get('http://localhost:8085/api/chauffeurs')
@@ -119,3 +121,4 @@ export class DataService {
     }
 
 }
+
