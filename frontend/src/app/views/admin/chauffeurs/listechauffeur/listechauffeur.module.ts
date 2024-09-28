@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ListechauffeurRoutingModule } from './listechauffeur-routing.module';
 import { ListechauffeurComponent } from './listechauffeur/listechauffeur.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,7 @@ import { ListechauffeurComponent } from './listechauffeur/listechauffeur.compone
   ],
   imports: [
     CommonModule,
-    ListechauffeurRoutingModule
+    ListechauffeurRoutingModule,FormsModule
   ]
 })
 export class ListechauffeurModule { }

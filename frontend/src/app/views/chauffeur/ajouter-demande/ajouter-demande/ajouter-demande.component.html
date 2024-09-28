@@ -1,0 +1,50 @@
+<div class="head-title">
+    <div class="left">
+        <h1>Dashboard</h1>
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li><i class='bx bx-chevron-right' ></i></li>
+            <li>
+                <a class="active" href="#">Home</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+            <div class="wrapper">
+                <div class="row no-gutters">
+                    <div class="contact-wrap w-100 p-md-5 p-4">
+                        <div id="form-message-warning" class="mb-4"></div>
+                        <div id="form-message-success" class="mb-4">
+                            Your message was sent, thank you!
+                        </div>
+                        <form #f="ngForm" (ngSubmit)="add(f)">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <input type="text" class="form-control" name="typeconge" id="typeconge" placeholder="Type Congé" [(ngModel)]="typeconge" required>
+                              </div>
+                              <div class="col-md-6">
+                                <input type="date" class="form-control" name="startDate" id="startDate" placeholder="Date de Début" [(ngModel)]="startDate" required>
+                              </div>
+                              <div class="col-md-6"> 
+                                <input type="date" class="form-control" name="endDate" id="endDate" placeholder="Date de Fin" [(ngModel)]="endDate" required>
+                              </div>
+                              <div class="col-md-12">
+                                <input type="text" class="form-control" name="reason" id="reason" placeholder="Raison" [(ngModel)]="reason" required>
+                              </div>
+                              <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                              </div>
+                            </div>
+                          </form>
+                                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

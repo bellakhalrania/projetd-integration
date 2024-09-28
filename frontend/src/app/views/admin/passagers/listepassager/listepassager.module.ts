@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ListepassagerRoutingModule } from './listepassager-routing.module';
 import { ListepassagerComponent } from './listepassager/listepassager.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,7 @@ import { ListepassagerComponent } from './listepassager/listepassager.component'
   ],
   imports: [
     CommonModule,
-    ListepassagerRoutingModule
+    ListepassagerRoutingModule,FormsModule
   ]
 })
 export class ListepassagerModule { }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AddchauffeurRoutingModule } from './addchauffeur-routing.module';
 import { AddchauffeurComponent } from './addchauffeur/addchauffeur.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,7 @@ import { AddchauffeurComponent } from './addchauffeur/addchauffeur.component';
   ],
   imports: [
     CommonModule,
-    AddchauffeurRoutingModule
+    AddchauffeurRoutingModule,FormsModule
   ]
 })
 export class AddchauffeurModule { }

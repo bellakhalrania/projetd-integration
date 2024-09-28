@@ -93,15 +93,32 @@ export class DataService {
     return this.http.put('http://localhost:8085/api/cars/'+id,newdata)
   }
 
-  /*************************************Recherche Trajet******************* *//*
-  getDepartureStations(): Observable<string[]> {
-    return this.http.get<string[]>('http://localhost:8085/api/departureStations');
+  /**********************************chauffeur************************************* */
+  getAllchauffeur(){
+    return this.http.get('http://localhost:8085/api/chauffeurs')
   }
-
-  getArrivalStations(): Observable<string[]> {
-    return this.http.get<string[]>('http://localhost:8085/api/arrivalStations');
+  addchauffeur(chauffeur:any){
+    return this.http.post('http://localhost:8085/api/chauffeurs',chauffeur);
   }
+  deletechauffeur(id:any){
+    return this.http.delete('http://localhost:8085/api/chauffeurs/'+id)
+  }
+  updatechauffeur(id:string,newdata:any){
+    return this.http.put('http://localhost:8085/api/chauffeurs/'+id,newdata)
+  }
+    /**********************************demandeConge************************************* */
+    addDemandeConge(demandeConge: any) {
+      return this.http.post('http://localhost:8085/api/conge', demandeConge);
+      
+    }
+    getAllDemandeConge(){
+      return this.http.get('http://localhost:8085/api/conge')
+    }
+    /**********************************reclamation************************************* */
+    addreclamation(reclamation: any) {
+      return this.http.post('http://localhost:8085/api/chauffeur/Reclamation', reclamation);
+      
+    }
 
-  searchTravels(departureStation: string, arrivalStation: string) {
-    return this.http.get<string[]>('http://localhost:8085/api/search');
-  }*/}
+}
+
